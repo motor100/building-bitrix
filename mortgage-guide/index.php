@@ -1,0 +1,188 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetTitle("Гид по ипотек");
+?>
+
+<div class="breadcrumbs">
+  <div class="container">
+    <div class="parent">
+      <a href="/">Главная</a>
+    </div>
+    <div class="separator">|</div>
+    <div class="parent">
+      <a href="/mortgage.html">Ипотека</a>
+    </div>
+    <div class="active">Гид по ипотеке</div>
+  </div>
+</div>
+
+<div class="mortgage-guide-page mortgage-page">
+
+  <div class="container">
+    <div class="primary-title page-title">Гид по ипотеке</div>
+  </div>
+
+  <div class="title-section">
+    <div class="container">
+      <div class="mortgage-title mbottom20">Ипотека — большой и важный шаг. Мы подготовили ответы на самые главные вопросы по ипотеке, которые помогут разобраться в тонкостях сделки</div>
+      <div class="horizontal-line"></div>
+    </div>
+  </div>
+
+  <div class="list-section">
+    <div class="container">
+      <div class="list-section__title">Процесс покупки в ипотеку</div>
+      <div class="list-section-frame">
+        <ol class="list">
+          <li class="list-item">Забронируйте квартиру</li>
+          <li class="list-item">Подайте заявку на ипотеку онлайн и получите одобрение</li>
+          <li class="list-item">Подготовьте договор долевого участия (ДДУ)</li>
+          <li class="list-item">Подпишите ипотечный договор онлайн</li>
+          <li class="list-item">Подпишите пакет документов по сделке с помощью ЭЦП</li>
+          <li class="list-item">Дождитесь регистрации в Росреестре. Когда всё будет готово, пришлём документы вам на электронную почту</li>
+        </ol>
+      </div>
+      <div class="horizontal-line"></div>
+    </div>
+  </div>
+
+  <div class="accordeon-section mbottom20">  
+    <div class="container">
+
+      <div class="mortgage-title mbottom20">Документы для оформления</div>
+      <div class="section-content mbottom20">
+        <p>Список документов от банка не зависит — мы договорились об одном списке документов, который принимают все банки.</p>
+        <p>Иногда может потребоваться брачный договор, нотариально заверенное заявление, документы на всех созаёмщиков.</p>
+      </div>
+
+      <div class="accordeon">
+        <div class="accordeon-item">
+          <div class="title-wrapper">
+            <div class="accordeon-item-title">Документы для покупки квартиры</div>
+            <div class="arrow"></div>
+          </div>
+          <div class="accordeon-text">Можно написать текст онлайн на русском языке нейросетью. Генератор текста онлайн бесплатно экономит время и силы с искусственным интеллектом.</div>
+        </div>
+        <div class="accordeon-item">
+          <div class="title-wrapper">
+            <div class="accordeon-item-title">Документы для оформления ипотеки (полный набор)</div>
+            <div class="arrow"></div>
+          </div>
+          <div class="accordeon-text">
+            <ul>
+              <li>Документы для оформления ипотеки (полный набор)</li>
+              <li>Паспорт заемщика</li>
+              <li>СНИЛС</li>
+              <li>Военный билет для мужчин до 28 лет, документ не обязательный</li>
+              <li>Трудовая книжка, заверенная работодателем</li> 
+              <li>Документы, подтверждающие доходы: 2НДФЛ или справка по форме банка</li>
+            </ul> 
+          </div>
+        </div>
+        <div class="accordeon-item">
+          <div class="title-wrapper">
+            <div class="accordeon-item-title">Ипотека по двум документам</div>
+            <div class="arrow"></div>
+          </div>
+          <div class="accordeon-text">Можно написать текст онлайн на русском языке нейросетью. Генератор текста онлайн бесплатно экономит время и силы с искусственным интеллектом.</div>
+        </div>
+        <div class="accordeon-item">
+          <div class="title-wrapper">
+            <div class="accordeon-item-title">Созаемщику</div>
+            <div class="arrow"></div>
+          </div>
+          <div class="accordeon-text">Можно написать текст онлайн на русском языке нейросетью. Генератор текста онлайн бесплатно экономит время и силы с искусственным интеллектом.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="merge-section">
+    <div class="container">
+    <div class="mortgage-title mbottom20">Если женат/замужем</div>
+        <div class="section-content mbottom20">Супруг или супруга становится совладельцем квартиры, если в брачном договоре не предусмотрено иное. Обязательно отметьте, что вы в браке, и загрузите все необходимые документы. Для ипотеки не требуется подтверждение дохода супруга, но можно его указать.</div>
+        <div class="horizontal-line"></div>
+    </div>
+  </div>
+
+  <div class="insurance-section ptop20">
+    <div class="container">
+      <div class="mortgage-title mbottom20">Процесс покупки в ипотеку</div>
+      <div class="section-content">
+        <p><strong>Страховка на квартиру</strong> обязательна по закону и рассчитывается после оценки квартиры. Оформляется после получения ключей. Страховая сумма рассчитывается, исходя из задолженности по кредитному договору, и ежегодно понижается по мере её погашения.</p>
+        <p><strong>Страхование жизни</strong> добровольное, оформлять не обязательно. Но оно влияет на ипотечную ставку, обычно без него банки повышают ставку на 1–2%.</p>
+        <p>Мы оформляем страховки. Достаточно предоставить паспортные данные и оплатить страховку. Полис придёт на электронную почту.</p>
+      </div>
+      <div class="horizontal-line"></div>
+    </div>
+  </div>
+
+  <div class="bank-section ptop20">
+    <div class="container">
+      <div class="mortgage-title mbottom20">Взаимодействие с банком</div>
+      <div class="section-content mbottom20">При покупке квартиры банк выступает в качестве гаранта сделки, снижает риски для покупателя. В любом случае деньги проходят через специальный банковский счёт — аккредитив или эскроу.</div>
+      <div class="horizontal-line"></div>
+    </div>
+  </div>
+
+  <div class="accordeon-section mbottom20">
+    <div class="container">
+      <div class="accordeon">
+        <div class="accordeon-item">
+          <div class="title-wrapper">
+            <div class="accordeon-item-title">Если брать ипотеку</div>
+            <div class="arrow"></div>
+          </div>
+          <div class="accordeon-text">Можно написать текст онлайн на русском языке нейросетью. Генератор текста онлайн бесплатно экономит время и силы с искусственным интеллектом.</div>
+        </div>
+        <div class="accordeon-item">
+          <div class="title-wrapper">
+            <div class="accordeon-item-title">Оплата договора долевого участия</div>
+            <div class="arrow"></div>
+          </div>
+          <div class="accordeon-text">
+            <ul>
+              <li>Документы для оформления ипотеки (полный набор)</li>
+              <li>Паспорт заемщика</li>
+              <li>СНИЛС</li>
+              <li>Военный билет для мужчин до 28 лет, документ не обязательный</li>
+              <li>Трудовая книжка, заверенная работодателем</li> 
+              <li>Документы, подтверждающие доходы: 2НДФЛ или справка по форме банка</li>
+            </ul> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="co-borrower-section">
+    <div class="container">
+      <div class="mortgage-title mbottom20">Кто может быть созаёмщиком</div>
+      <div class="section-content">
+        <ul>
+          <li>Любой родственник или друг.</li>
+          <li>Супруг/супруга является обязательным созаёмщиком в отсутствие брачного договора, предполагающего иное.</li>
+        </ul>
+        <p>У отдельных программ и банков могут быть условия, что созаёмщиком может быть только супруг/супруга. Однако, у отдельных программ и банков могут быть условия, которые не позволяют привлекать к сделке третьих лиц.</p>
+      </div>
+      <div class="horizontal-line"></div>
+    </div>
+  </div>
+
+  <div class="mother-capital-section ptop20">
+    <div class="container">
+      <div class="mortgage-title mbottom20">Материнский капитал</div>
+      <div class="section-content">
+        <p>Материнский капитал можно потратить на первоначальный взнос (часть взноса или весь) и на погашение долга. При этом в первоначальном взносе материнский капитал можно использовать только в договоре долевого участия.</p>
+        <p>При использовании материнского капитала каждый ребёнок должен получить долю в квартире. При продаже такой квартиры сделку должны согласовать органы опеки.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const topMenuItemActive = 3;
+</script>
+
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -1,0 +1,90 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+/** @var array $arParams */
+/** @var array $arResult */
+/** @global CMain $APPLICATION */
+/** @global CUser $USER */
+/** @global CDatabase $DB */
+/** @var CBitrixComponentTemplate $this */
+/** @var string $templateName */
+/** @var string $templateFile */
+/** @var string $templateFolder */
+/** @var string $componentPath */
+/** @var CBitrixComponent $component */
+$this->setFrameMode(true);
+$APPLICATION->SetTitle($arResult["NAME"]);
+?>
+
+<div class="breadcrumbs">
+  <div class="container">
+    <div class="parent">
+      <a href="/">Главная</a>
+    </div>
+    <div class="separator">|</div>
+    <div class="parent">
+      <a href="/promo.html">Акции</a>
+    </div>
+    <div class="separator">|</div>
+    <div class="active"><?=$arResult["NAME"]?></div>
+  </div>
+</div>
+
+<div class="np-detail-page">
+
+  <div class="container">
+    <div class="primary-title page-title"><?=$arResult["NAME"]?></div>
+  </div>
+
+  <div class="np-detail-content-section section">
+    <div class="container">
+      <div class="np-detail__date"><?php echo mb_substr($arResult["TIMESTAMP_X"], 0, 10); ?></div>
+      <!-- <div class="np-detail__excerpt">В жилом комплексе «Павелецкая Сити» до конца июля действует скидка 20%* на приобретение квартиры.</div> -->
+      <div class="np-detail__text"><?echo $arResult["DETAIL_TEXT"];?></div>
+      <div class="np-detail__buttons">
+        <div class="view-more-btn tertiary-btn">
+          <span class="tertiary-btn__text">Подробнее о проекте</span>
+        </div>
+        <div class="make-an-appointment-btn primary-btn js-callback-form-btn">
+          <span class="primary-btn__text">Записаться на встречу</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subscribe-section">
+    <div class="container">
+      <div class="dark-frame">
+        <div class="subscribe-frame__title primary-title">Подпишитесь на рассылку</div>
+        <div class="subscribe-frame__text">Только самая полезная информация о проектах и квартирах</div>
+
+        <form id="subscribe-form" class="form">
+          <div class="flex-container">
+            <div class="form-group">
+              <label for="big-form-name" class="label">Имя*</label>
+              <input type="text" name="name" id="big-form-name" class="input-field" autocomplete="on" placeholder="Введите имя">
+            </div>
+            <div class="form-group">
+              <label for="big-form-email" class="label">Email*</label>
+              <input type="email" name="email" id="big-form-email" class="input-field" autocomplete="on" placeholder="pochta@mail.ru">
+            </div>
+            <button id="callback-submit-btn5" class="submit-btn tertiary-btn">
+              <span class="tertiary-btn__text">Подписаться на рассылку</span>
+            </button>
+          </div>
+          <div class="checkboxes-flex-container">
+            <div class="agreement-text">
+              <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback5" required onchange="document.getElementById('callback-submit-btn5').disabled = !this.checked;">
+              <label for="checkbox-read-callback5" class="custom-checkbox-label"></label>
+              <span class="checkbox-text">Ознакомлен (-на) с <a href="/privacy-policy.html" class="privacy-policy-link" target="_blank">политикой конфиденциальности</a></span>
+            </div>
+            <div class="agreement-text">
+              <input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-callback5" required onchange="document.getElementById('callback-submit-btn5').disabled = !this.checked;">
+              <label for="checkbox-agree-callback5" class="custom-checkbox-label"></label>
+              <span class="checkbox-text">Я согласен (-на) на <a href="/soglasie-posetitelya-sajta-na-obrabotku-personalnyh-dannyh.html" class="agreement-link" target="_blank">обработку персональных данных</a></span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

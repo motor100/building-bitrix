@@ -1,0 +1,253 @@
+<footer class="footer">
+  <div class="container position-relative">
+    <div class="flex-container">
+      <div class="logo-wrapper">
+        <div class="logo">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/logo-new.svg" alt="">
+        </div>
+        <div class="footer-decription">
+          <p>Информация о ценах, планировках, специальных предложениях, размещенных на сайте носит исключительно ознакомительный характер, не является публичной офертой, определяемой положениями статьи 437 Гражданского кодекса Российской Федерации.</p>
+          <p>Все изображения носит информационный характер и могут отличаться от фактически реализованного проекта.</p>
+        </div>
+        <div class="required-links required-links-desktop">
+          <a href="https://наш.дом.рф" class="required-link">Проектная декларация размещена на сайте наш.дом.рф</a>
+          <a href="/privacy-policy" class="required-link">Политика конфиденциальности</a>
+          <a href="/agreement" class="required-link">Согласие на обработку персональных данных</a>
+          <a href="/limitation-of-liability" class="required-link">Заявление об ограничении ответственности</a>
+        </div>
+      </div>
+      <div class="footer-menu">
+        <div class="bottom-menu">
+          <div class="menu-title">Наши проекты</div>
+          <a href="#" class="menu-item">Гранат</a>
+          <a href="#" class="menu-item">Островский</a>
+          <a href="#" class="menu-item">Чурилово 3.20</a>
+        </div>
+        <div class="bottom-menu">
+          <div class="menu-title">Недвижимость</div>
+          <a href="#" class="menu-item">Жилая</a>
+          <a href="#" class="menu-item">Коммерческая</a>
+        </div>
+        <div class="bottom-menu">
+          <div class="menu-title">Клиентам</div>
+          <a href="/promo" class="menu-item">Акции</a>
+          <a href="/mortgage" class="menu-item">Ипотека</a>
+          <a href="#" class="menu-item">Отзывы</a>
+          <a href="/contacts" class="menu-item">Контакты</a>
+        </div>
+        <div class="bottom-menu">
+          <div class="menu-title">О компании</div>
+          <a href="#" class="menu-item">О нас</a>
+          <a href="#" class="menu-item">Партнерам</a>
+          <a href="#" class="menu-item">Вакансии</a>
+          <a href="#" class="menu-item">Новости</a>
+          <a href="#" class="menu-item">Документы</a>
+          <a href="#" class="menu-item">Реквизиты</a>
+        </div>
+      </div>
+      <div class="contacts">
+        <a href="tel:+73517501700" class="footer-phone">+7 (351) 750 17 00</a>
+        <div class="footer-socials">
+          <a href="#" class="footer-socials-item">
+            <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2212 0.129985C20.4917 0.0148902 20.7877 -0.0248051 21.0786 0.0150299C21.3694 0.054865 21.6443 0.172775 21.8748 0.356486C22.1052 0.540197 22.2827 0.782995 22.3889 1.05961C22.495 1.33622 22.5259 1.63653 22.4782 1.92929L19.9957 17.1526C19.7549 18.621 18.1611 19.4631 16.829 18.7316C15.7147 18.1197 14.0597 17.1769 12.5711 16.1931C11.8267 15.7007 9.54669 14.1238 9.82691 13.0018C10.0677 12.0424 13.8988 8.4371 16.088 6.29365C16.9472 5.45154 16.5554 4.96575 15.5407 5.74036C13.0198 7.6636 8.97532 10.5883 7.63772 11.4116C6.45775 12.1375 5.84259 12.2615 5.10702 12.1375C3.76505 11.9118 2.5205 11.5621 1.50471 11.1361C0.132094 10.5606 0.198864 8.65289 1.50362 8.09738L20.2212 0.129985Z"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-socials-item">
+            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.167 0.5C12.4466 0.500053 14.6172 1.39228 16.2344 3C17.8468 4.6031 18.7499 6.76035 18.75 9.03613C18.75 11.3116 17.8462 13.4691 16.2334 15.0713C14.6154 16.6785 12.444 17.5693 10.1641 17.5693C9.44022 17.5693 8.71961 17.4801 8.01953 17.3008C7.87911 17.2648 7.73985 17.2247 7.60156 17.1816L7.70801 17.1484L6.29004 16.6553L6.11035 17.0811L5.97363 16.6514L1.46387 18.0889L1.04004 18.2236L2.64258 13.4863L2.71191 13.2803L2.60742 13.0879C2.30341 12.5284 2.06309 11.9356 1.8916 11.3223C1.6835 10.5776 1.57812 9.80689 1.57812 9.0332C1.57824 6.75751 2.48252 4.60018 4.0957 2.99805C5.71429 1.39069 7.8865 0.5 10.167 0.5Z"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M18.528 9.03566C18.528 6.74085 17.5921 4.66308 16.0791 3.15887C14.5662 1.65487 12.4767 0.724609 10.1693 0.724609C7.85995 0.724609 5.76948 1.65455 4.25591 3.15774C2.74168 4.66161 1.80535 6.73899 1.80535 9.03276C1.80535 9.80273 1.91171 10.5499 2.11017 11.26C2.30737 11.9656 2.59586 12.6336 2.96155 13.2502L1.51295 17.534L1.39844 17.8727L1.73869 17.7643L6.19419 16.3447C6.78407 16.6625 7.41519 16.9116 8.07775 17.0813C8.7453 17.2523 9.44492 17.3431 10.1666 17.3431C12.475 17.3431 14.5648 16.4131 16.078 14.9099C17.5918 13.4062 18.5279 11.329 18.5279 9.03566L18.528 9.03566Z"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.80692 6.76926C8.77022 6.69523 8.55835 6.18291 8.36307 5.71068C8.23824 5.4088 8.11919 5.12091 8.09584 5.06522C7.87592 4.54024 7.63285 4.55606 7.44641 4.56819C7.43417 4.56898 7.42238 4.56975 7.40661 4.56975C7.34156 4.56975 7.27762 4.5657 7.21137 4.5615C7.12853 4.55624 7.04255 4.55078 6.96129 4.55078C6.85326 4.55078 6.70611 4.57322 6.55117 4.64583C6.43626 4.69968 6.31772 4.78076 6.20922 4.9001C6.1934 4.91722 6.18148 4.92977 6.16853 4.94339C5.91039 5.21507 5.34766 5.80728 5.34766 6.94465C5.34766 8.13773 6.20697 9.27233 6.33325 9.43895L6.33279 9.43929L6.33396 9.44082L6.33538 9.44224C6.34033 9.44864 6.35857 9.47535 6.38552 9.51483C6.70288 9.97953 8.16184 12.1159 10.3797 12.9832C12.3917 13.7692 12.7558 13.681 13.081 13.6022C13.1364 13.5888 13.1904 13.5757 13.2489 13.5703C13.5123 13.5455 13.9431 13.365 14.3056 13.1115C14.6064 12.9013 14.8689 12.6356 14.9694 12.3558C15.0591 12.1056 15.1098 11.8732 15.1333 11.6819C15.1675 11.404 15.1404 11.1853 15.0899 11.1009L15.0892 11.1002C15.0124 10.9735 14.8796 10.9107 14.6804 10.8166C14.6453 10.8 14.6077 10.7822 14.5716 10.7647L14.5717 10.7645C14.4343 10.6945 13.959 10.4619 13.5528 10.2696C13.2902 10.1453 13.057 10.0386 12.9646 10.0054C12.8346 9.95866 12.7214 9.92333 12.6001 9.93702C12.4624 9.95257 12.3424 10.0235 12.2311 10.1923L12.2308 10.1921C12.1749 10.2761 12.0764 10.4022 11.9688 10.5341C11.7984 10.7432 11.5951 10.9779 11.5084 11.0764V11.0771C11.4714 11.1193 11.4395 11.1423 11.4082 11.1461C11.3648 11.1513 11.3051 11.1335 11.2225 11.0929C11.1697 11.0664 11.1182 11.0441 11.0547 11.0167C10.7334 10.8779 10.1076 10.6076 9.3944 9.97535C9.13928 9.74928 8.91477 9.50213 8.72725 9.27024C8.42377 8.89492 8.21867 8.56055 8.13718 8.4197C8.07285 8.30924 8.14432 8.23764 8.21032 8.17157L8.20998 8.17119C8.28296 8.09821 8.36553 7.99883 8.44841 7.89911C8.48615 7.85369 8.5239 7.80824 8.56982 7.75529L8.57052 7.75458C8.68229 7.62446 8.72862 7.52969 8.79116 7.4018C8.80205 7.37954 8.81346 7.35621 8.82494 7.33328L8.82564 7.33258C8.88064 7.22163 8.89471 7.11606 8.88446 7.01718C8.87495 6.92513 8.84418 6.84298 8.80664 6.76939L8.80692 6.76926Z" stroke="#FAFAFA"/>
+            </svg>
+          </a>
+        </div>
+        <a href="mailto:eristavi.74sz@gmail.com" class="footer-email">
+            <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M4.125 1C2.39911 1 1 2.39911 1 4.125V14.5417C1 16.2676 2.39911 17.6667 4.125 17.6667H18.7083C20.4342 17.6667 21.8333 16.2676 21.8333 14.5417V4.125C21.8333 2.39911 20.4342 1 18.7083 1H4.125ZM3.94324 3.09914C4.00227 3.08875 4.063 3.08333 4.125 3.08333H18.7083C18.7703 3.08333 18.8311 3.08875 18.8901 3.09914L11.4167 8.08143L3.94324 3.09914ZM3.08333 5.02972V14.5417C3.08333 15.117 3.5497 15.5833 4.125 15.5833H18.7083C19.2836 15.5833 19.75 15.117 19.75 14.5417V5.02973L11.9945 10.2001C11.6446 10.4333 11.1888 10.4333 10.8389 10.2001L3.08333 5.02972Z" />
+            </svg>
+            <span class="footer-email-text">eristavi.74sz@gmail.com</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bg">
+      <img src="<?=SITE_TEMPLATE_PATH?>/images/footer.png" alt="">
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="required-links required-links-mobile">
+      <a href="https://наш.дом.рф" class="required-link">Проектная декларация размещена на сайте наш.дом.рф</a>
+      <a href="/privacy-policy" class="required-link">Политика конфиденциальности</a>
+      <a href="/agreement" class="required-link">Согласие на обработку персональных данных</a>
+      <a href="/limitation-of-liability" class="required-link">Заявление об ограничении ответственности</a>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="company-info">
+        <div class="company-info-item">ООО СЗ "Эристави"</div>
+        <div class="company-info-item">ИНН 7453356505</div>
+        <div class="company-info-item">ОГРН 1237400042879</div>
+        <div class="company-info-item">Челябинск, ул Энгельса, д. 4, п. 344</div>
+        <div class="company-info-item">Все права защищены</div>
+        <div class="company-info-item">© <span id="current-year"></span></div>
+      </div>
+      <div class="footer-developers">
+        <div class="author">
+          <a href="https://nhfuture.ru/" target="_blank">Дизайн Andrewwebnh</a>
+        </div>
+        <div class="author">
+          <a href="https://mybutton.ru/" target="_blank">Поддержка Button</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-menu">
+  <div class="container">
+    <div class="flex-container">
+      <div class="logo-wrapper">
+        <div class="close-menu-back js-close-menu">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/close-menu-back.svg" alt="">
+        </div>
+        <div class="logo">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/logo-new.svg" alt="">
+        </div>
+      </div>
+      <div class="close-menu js-close-menu">
+        <img src="<?=SITE_TEMPLATE_PATH?>/images/menu-close.svg" alt="">
+      </div>
+    </div>
+
+    <div class="menu top-menu">
+      <div class="menu-item">
+        <a href="/projects" class="menu-item__link">Проекты</a>
+      </div>
+      <div class="menu-item">
+        <a href="/promo" class="menu-item__link">Акции</a>
+      </div>
+      <div class="menu-item">
+        <a href="/mortgage" class="menu-item__link">Ипотека</a>
+      </div>
+      <div class="menu-item">
+        <a href="/about-company" class="menu-item__link">О компании</a>
+      </div>
+      <div class="menu-item">
+        <a href="/contacts" class="menu-item__link">Контакты</a>
+      </div>
+      <div class="menu-item">
+        <a href="/documents" class="menu-item__link">Документы</a>
+      </div>
+      <div class="menu-item">
+        <a href="/projects-map" class="menu-item__link">Карта проектов</a>
+      </div>
+    </div>
+
+    <div class="socials">
+      <a href="#" class="socials-item socials-item-phone">
+        <span class="phone-text">+7 (999) 999-99-99</span>
+      </a>
+      <a href="#" class="socials-item">
+        <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2212 0.129985C20.4917 0.0148902 20.7877 -0.0248051 21.0786 0.0150299C21.3694 0.054865 21.6443 0.172775 21.8748 0.356486C22.1052 0.540197 22.2827 0.782995 22.3889 1.05961C22.495 1.33622 22.5259 1.63653 22.4782 1.92929L19.9957 17.1526C19.7549 18.621 18.1611 19.4631 16.829 18.7316C15.7147 18.1197 14.0597 17.1769 12.5711 16.1931C11.8267 15.7007 9.54669 14.1238 9.82691 13.0018C10.0677 12.0424 13.8988 8.4371 16.088 6.29365C16.9472 5.45154 16.5554 4.96575 15.5407 5.74036C13.0198 7.6636 8.97532 10.5883 7.63772 11.4116C6.45775 12.1375 5.84259 12.2615 5.10702 12.1375C3.76505 11.9118 2.5205 11.5621 1.50471 11.1361C0.132094 10.5606 0.198864 8.65289 1.50362 8.09738L20.2212 0.129985Z"/>
+        </svg>
+        <span class="socials-item__text">Telegram</span>
+      </a>
+      <a href="#" class="socials-item">
+        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.167 0.5C12.4466 0.500053 14.6172 1.39228 16.2344 3C17.8468 4.6031 18.7499 6.76035 18.75 9.03613C18.75 11.3116 17.8462 13.4691 16.2334 15.0713C14.6154 16.6785 12.444 17.5693 10.1641 17.5693C9.44022 17.5693 8.71961 17.4801 8.01953 17.3008C7.87911 17.2648 7.73985 17.2247 7.60156 17.1816L7.70801 17.1484L6.29004 16.6553L6.11035 17.0811L5.97363 16.6514L1.46387 18.0889L1.04004 18.2236L2.64258 13.4863L2.71191 13.2803L2.60742 13.0879C2.30341 12.5284 2.06309 11.9356 1.8916 11.3223C1.6835 10.5776 1.57812 9.80689 1.57812 9.0332C1.57824 6.75751 2.48252 4.60018 4.0957 2.99805C5.71429 1.39069 7.8865 0.5 10.167 0.5Z"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M18.528 9.03566C18.528 6.74085 17.5921 4.66308 16.0791 3.15887C14.5662 1.65487 12.4767 0.724609 10.1693 0.724609C7.85995 0.724609 5.76948 1.65455 4.25591 3.15774C2.74168 4.66161 1.80535 6.73899 1.80535 9.03276C1.80535 9.80273 1.91171 10.5499 2.11017 11.26C2.30737 11.9656 2.59586 12.6336 2.96155 13.2502L1.51295 17.534L1.39844 17.8727L1.73869 17.7643L6.19419 16.3447C6.78407 16.6625 7.41519 16.9116 8.07775 17.0813C8.7453 17.2523 9.44492 17.3431 10.1666 17.3431C12.475 17.3431 14.5648 16.4131 16.078 14.9099C17.5918 13.4062 18.5279 11.329 18.5279 9.03566L18.528 9.03566Z"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M8.80692 6.76926C8.77022 6.69523 8.55835 6.18291 8.36307 5.71068C8.23824 5.4088 8.11919 5.12091 8.09584 5.06522C7.87592 4.54024 7.63285 4.55606 7.44641 4.56819C7.43417 4.56898 7.42238 4.56975 7.40661 4.56975C7.34156 4.56975 7.27762 4.5657 7.21137 4.5615C7.12853 4.55624 7.04255 4.55078 6.96129 4.55078C6.85326 4.55078 6.70611 4.57322 6.55117 4.64583C6.43626 4.69968 6.31772 4.78076 6.20922 4.9001C6.1934 4.91722 6.18148 4.92977 6.16853 4.94339C5.91039 5.21507 5.34766 5.80728 5.34766 6.94465C5.34766 8.13773 6.20697 9.27233 6.33325 9.43895L6.33279 9.43929L6.33396 9.44082L6.33538 9.44224C6.34033 9.44864 6.35857 9.47535 6.38552 9.51483C6.70288 9.97953 8.16184 12.1159 10.3797 12.9832C12.3917 13.7692 12.7558 13.681 13.081 13.6022C13.1364 13.5888 13.1904 13.5757 13.2489 13.5703C13.5123 13.5455 13.9431 13.365 14.3056 13.1115C14.6064 12.9013 14.8689 12.6356 14.9694 12.3558C15.0591 12.1056 15.1098 11.8732 15.1333 11.6819C15.1675 11.404 15.1404 11.1853 15.0899 11.1009L15.0892 11.1002C15.0124 10.9735 14.8796 10.9107 14.6804 10.8166C14.6453 10.8 14.6077 10.7822 14.5716 10.7647L14.5717 10.7645C14.4343 10.6945 13.959 10.4619 13.5528 10.2696C13.2902 10.1453 13.057 10.0386 12.9646 10.0054C12.8346 9.95866 12.7214 9.92333 12.6001 9.93702C12.4624 9.95257 12.3424 10.0235 12.2311 10.1923L12.2308 10.1921C12.1749 10.2761 12.0764 10.4022 11.9688 10.5341C11.7984 10.7432 11.5951 10.9779 11.5084 11.0764V11.0771C11.4714 11.1193 11.4395 11.1423 11.4082 11.1461C11.3648 11.1513 11.3051 11.1335 11.2225 11.0929C11.1697 11.0664 11.1182 11.0441 11.0547 11.0167C10.7334 10.8779 10.1076 10.6076 9.3944 9.97535C9.13928 9.74928 8.91477 9.50213 8.72725 9.27024C8.42377 8.89492 8.21867 8.56055 8.13718 8.4197C8.07285 8.30924 8.14432 8.23764 8.21032 8.17157L8.20998 8.17119C8.28296 8.09821 8.36553 7.99883 8.44841 7.89911C8.48615 7.85369 8.5239 7.80824 8.56982 7.75529L8.57052 7.75458C8.68229 7.62446 8.72862 7.52969 8.79116 7.4018C8.80205 7.37954 8.81346 7.35621 8.82494 7.33328L8.82564 7.33258C8.88064 7.22163 8.89471 7.11606 8.88446 7.01718C8.87495 6.92513 8.84418 6.84298 8.80664 6.76939L8.80692 6.76926Z" stroke="#FAFAFA"/>
+        </svg>
+        <span class="socials-item__text">WhatsApp</span>
+      </a>
+      <a href="#" class="socials-item">
+        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.3281 0.501953C15.2315 0.517971 16.803 0.64675 17.8281 1.67188C18.9997 2.84345 19 4.72876 19 8.5V11.5L18.998 12.8281C18.982 15.7315 18.8533 17.303 17.8281 18.3281C16.803 19.3533 15.2315 19.482 12.3281 19.498L11 19.5H8C4.34627 19.5 2.46248 19.5 1.2832 18.4346L1.17188 18.3281C0.14675 17.303 0.017971 15.7315 0.00195312 12.8281L0 11.5V8.5C0 4.84627 -2.78904e-06 2.96248 1.06543 1.7832L1.17188 1.67188C2.34345 0.500302 4.22876 0.5 8 0.5H11L12.3281 0.501953ZM8 2.5C6.05784 2.5 4.80197 2.50454 3.87695 2.62891C3.00986 2.74554 2.73816 2.93372 2.58594 3.08594C2.43372 3.23816 2.24554 3.50986 2.12891 4.37695C2.00454 5.30197 2 6.55784 2 8.5V11.5C2 13.4422 2.00454 14.698 2.12891 15.623C2.24554 16.4901 2.43372 16.7618 2.58594 16.9141C2.73816 17.0663 3.00986 17.2545 3.87695 17.3711C4.80197 17.4955 6.05784 17.5 8 17.5H11C12.9422 17.5 14.198 17.4955 15.123 17.3711C15.9901 17.2545 16.2618 17.0663 16.4141 16.9141C16.5663 16.7618 16.7545 16.4901 16.8711 15.623C16.9955 14.698 17 13.4422 17 11.5V8.5C17 6.55784 16.9955 5.30197 16.8711 4.37695C16.7545 3.50986 16.5663 3.23816 16.4141 3.08594C16.2618 2.93372 15.9901 2.74554 15.123 2.62891C14.198 2.50454 12.9422 2.5 11 2.5H8ZM5.63281 6.83301C5.74889 10.2916 7.60646 11.3219 8.41895 11.6162V6.83301H10.2754V9.48242C11.7611 9.30581 12.7007 7.64246 12.9844 6.83301H14.9189C14.6868 8.52551 13.1519 9.82629 12.3652 10.2188C13.6806 10.6236 15.3055 12.573 15.3057 13.6768H13.2939C12.5511 11.793 10.9718 11.2239 10.2754 11.1748V13.6768C5.90374 13.9708 3.58217 10.5122 3.69824 6.83301H5.63281Z" />
+        </svg>
+        <span class="socials-item__text">Вконтакте</span>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<div class="fixed-bottom-menu hidden-desktop">
+  <div class="container">
+    <div class="menu-wrapper">
+      <div class="menu-item">
+        <div class="menu-item__image">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/bottom-house.svg" alt="">
+        </div>
+        <a href="/" class="full-link"></a>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item__image">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/bottom-catalog.svg" alt="">
+        </div>
+        <a href="/projects" class="full-link"></a>
+      </div>
+      <div class="menu-item favourite-menu-item">
+        <div class="menu-item__image">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/bottom-phone.svg" alt="">
+        </div>
+        <a href="tel:+73517501700" class="full-link"></a>
+      </div>
+      <button class="menu-btn quaternary-btn js-open-menu-btn">
+        <span class="menu-btn__text quaternary-btn__text">Меню</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div id="cookie_note" class="we-use-cookie">
+  <div class="we-use-cookie-wrapper">
+    <div class="we-use-cookie-image">
+      <img src="<?=SITE_TEMPLATE_PATH?>/images/cookie.png" alt="">
+    </div>
+    <div class="we-use-cookie-text">Мы используем файлы cookie и сервисы веб-аналитики (Яндекс.Метрика) для анализа производительности сайта, улучшения пользовательского опыта и обеспечения безопасности. Нажимая «Принять» вы соглашаетесь с нашей <a href="/privacy-policy">Политикой</a> в отношении файлов cookie.</div>
+    <div class="we-use-cookie-buttons">
+      <button id="cookie_accept" class="we-use-cookie-close we-use-cookie-close-accept">Принять</button>
+      <button id="cookie_dont_accept" class="we-use-cookie-close we-use-cookie-close-dont-accept">Отклонить</button>
+    </div>
+  </div>
+</div>
+
+<div id="callback-modal" class="modal-window callback-modal">
+  <div class="modal-wrapper">
+    <div class="modal-area">
+      <div class="modal-close">
+        <div class="close"></div>
+      </div>
+      <div class="modal-title">Заказать звонок</div>
+      <form id="callback-modal-form" class="form" method="post">
+        <div class="form-group">
+          <label for="name-callback-modal" class="label">Имя*</label>
+          <input type="text" id="name-callback-modal" class="input-field js-required-name" name="name" required minlength="3" maxlength="50" autocomplete="on" placeholder="">
+        </div>
+        <div class="form-group">
+          <label for="phone-callback-modal" class="label">Телефон*</label>
+          <input type="text" id="phone-callback-modal" class="input-field js-required-phone js-input-phone-mask" name="phone" required maxlength="18" autocomplete="on">
+        </div>
+        <button type="button" id="callback-modal-btn" class="submit-btn primary-btn">
+          <span class="primary-btn__text">Отправить</span>
+        </button>
+        <div class="agreement-text">
+          <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback" required onchange="document.getElementById('callback-modal-btn').disabled = !this.checked;">
+          <label for="checkbox-read-callback" class="custom-checkbox-label"></label>
+          <span class="checkbox-text">Я согласен (-на) с <a href="/politika-v-otnoshenii-obrabotki-personalnyh-dannyh/" class="privacy-policy-link" target="_blank">политикой конфиденциальности</a></span>
+        </div>
+        <div class="agreement-text">
+          <input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-callback" required onchange="document.getElementById('callback-modal-btn').disabled = !this.checked;">
+          <label for="checkbox-agree-callback" class="custom-checkbox-label"></label>
+          <span class="checkbox-text">Я согласен (-на) на <a href="/soglasie-posetitelya-sajta-na-obrabotku-personalnyh-dannyh/" class="agreement-link" target="_blank">обработку персональных данных</a></span>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetTitle("Реквизиты");
+?>
+
+<div class="breadcrumbs">
+  <div class="container">
+    <div class="parent">
+      <a href="/">Главная</a>
+    </div>
+    <div class="separator">|</div>
+    <div class="parent">
+      <a href="/documents.html">Документы</a>
+    </div>
+    <div class="active">Реквизиты</div>
+  </div>
+</div>
+
+<div class="requisites-page documents-page">
+
+  <div class="container">
+    <div class="primary-title page-title">Реквизиты</div>
+    <div class="requisites">
+      <div class="requisites-item">
+        <div class="requisites-item__title">Наименование</div>
+        <div class="requisites-item__value">ООО СЗ "Эристави"</div>
+      </div>
+      <div class="requisites-item">
+        <div class="requisites-item__title">ИНН</div>
+        <div class="requisites-item__value">7453356505</div>
+      </div>
+      <div class="requisites-item">
+        <div class="requisites-item__title">ОГРН</div>
+        <div class="requisites-item__value">1237400042879</div>
+      </div>
+      <div class="requisites-item">
+        <div class="requisites-item__title">Адрес</div>
+        <div class="requisites-item__value">Челябинская область, г Челябинск, ул Энгельса, д. 4, п. 344</div>
+      </div>
+      <div class="requisites-item">
+        <div class="requisites-item__title">Email</div>
+        <div class="requisites-item__value">eristavi.74sz@gmail.com</div>
+      </div>
+      <div class="requisites-item">
+        <div class="requisites-item__title">Телефон</div>
+        <div class="requisites-item__value">+7 (351) 750 17 00</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
