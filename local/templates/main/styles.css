@@ -1415,7 +1415,7 @@ iframe {
 .project-detail-page .location-section {
   padding: 0 0 40px 0;
 }
-.project-detail-page .new-location-section-title {
+.project-detail-page .location-section-title {
   margin: 0 0 20px 0;
   letter-spacing: -1.5px;
 }
@@ -1656,7 +1656,7 @@ iframe {
 
 /* Параграф текста левый и правый */
 .paragraph-left-right {
-  width: 70%;
+  /*width: 70%;*/
   font-size: 28px;
   line-height: 1.2;
 }
@@ -3111,7 +3111,7 @@ iframe {
   .project-detail-page .working-progress-section .working-progress-gallery {
     height: 271px;
   }
-  .project-detail-page .new-location-section-title {
+  .project-detail-page .location-section-title {
     letter-spacing: 0;
   }
 

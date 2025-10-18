@@ -15,8 +15,6 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 
   <?php
   use Bitrix\Main\Page\Asset;
-  // Только в карточке проекта
-  //Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/photoswipe.css");
   Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/imask.min.js");
   Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/script.js");
   ?>
