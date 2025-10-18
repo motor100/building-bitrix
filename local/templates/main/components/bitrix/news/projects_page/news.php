@@ -15,6 +15,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+$APPLICATION->SetTitle("Наши проекты");
 ?>
 <?php $GLOBALS['arrFilterProgress'] = array("SECTION_ID" => Array(5)); ?>
 <?php $GLOBALS['arrFilterComplete'] = array("SECTION_ID" => Array(6)); ?>
@@ -64,7 +65,7 @@ $this->setFrameMode(true);
                     "DETAIL_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["detail"],
                     "SECTION_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["section"],
                     "IBLOCK_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["news"],
-                    "SET_TITLE" => $arParams["SET_TITLE"],
+                    "SET_TITLE" => "N",
                     "SET_LAST_MODIFIED" => $arParams["SET_LAST_MODIFIED"],
                     "MESSAGE_404" => $arParams["MESSAGE_404"],
                     "SET_STATUS_404" => $arParams["SET_STATUS_404"],
@@ -126,7 +127,7 @@ $this->setFrameMode(true);
                     "DETAIL_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["detail"],
                     "SECTION_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["section"],
                     "IBLOCK_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["news"],
-                    "SET_TITLE" => $arParams["SET_TITLE"],
+                    "SET_TITLE" => "N",
                     "SET_LAST_MODIFIED" => $arParams["SET_LAST_MODIFIED"],
                     "MESSAGE_404" => $arParams["MESSAGE_404"],
                     "SET_STATUS_404" => $arParams["SET_STATUS_404"],

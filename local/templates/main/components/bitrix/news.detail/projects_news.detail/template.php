@@ -11,6 +11,9 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+$APPLICATION->SetTitle($arResult["NAME"]);
 ?>
 
 <p>55555</p>
+
+<div class="primary-title page-title"><?=$arResult["NAME"]?></div>

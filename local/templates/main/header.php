@@ -7,7 +7,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 <head>
   <?$APPLICATION->ShowHead();?>
   <meta charset="utf-8">
-  <title>Эристави | Квартиры в новостройках в Челябинске и области</title>
+  <title><?$APPLICATION->ShowTitle();?></title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

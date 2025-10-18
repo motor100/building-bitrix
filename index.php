@@ -138,7 +138,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/imask.min.js");
       		"SET_META_DESCRIPTION" => "Y",
       		"SET_META_KEYWORDS" => "Y",
       		"SET_STATUS_404" => "N",
-      		"SET_TITLE" => "Y",
+      		"SET_TITLE" => "N",
       		"SHOW_404" => "N",
       		"SLIDER_PROPERTY" => "PICS_NEWS",
       		"SORT_BY1" => "ACTIVE_FROM",
