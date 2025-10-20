@@ -32,7 +32,7 @@ $APPLICATION->SetTitle("Акции");
               <img src="<?=SITE_TEMPLATE_PATH?>/images/no-photo.jpg" alt="">
             <?php } ?>
           </div>        
-          <div class="news-item__title"><?echo $arItem["NAME"]?></div>
+          <div class="news-item__title"><?php echo $arItem["NAME"]?></div>
           <div class="flex-container">
             <div class="news-item__date"><?php echo mb_substr($arItem["TIMESTAMP_X"], 0, 10); ?></div>
             <div class="button-next">

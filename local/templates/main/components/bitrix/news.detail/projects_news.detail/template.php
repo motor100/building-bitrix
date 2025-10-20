@@ -13,11 +13,16 @@
 $this->setFrameMode(true);
 $APPLICATION->SetTitle($arResult["NAME"]);
 
-use Bitrix\Main\Page\Asset;
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/photoswipe.css");
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/swiper-bundle.min.css");
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/swiper-bundle.min.js");
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/imask.min.js");
+$this->addExternalCss(SITE_TEMPLATE_PATH . "/css/photoswipe.css");
+$this->addExternalCss(SITE_TEMPLATE_PATH . "/css/swiper-bundle.min.css");
+$this->addExternalJs(SITE_TEMPLATE_PATH . "/js/swiper-bundle.min.js");
+$this->addExternalJs(SITE_TEMPLATE_PATH . "/js/imask.min.js");
+?>
+
+<?php 
+$working_progress = $arResult['PROPERTIES']['WORKING_PROGRESS']['VALUE'];
+$status = $arResult['PROPERTIES']['STATUS']['VALUE'];
+$advantages = $arResult['PROPERTIES']['ADVANTAGES']['VALUE'];
 ?>
 
 <div class="breadcrumbs">
@@ -48,8 +53,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/imask.min.js");
 						<img src="<?=SITE_TEMPLATE_PATH?>/images/arrow-right-white.png" class="view-more-btn__image quaternary-btn__image" alt="">
 					</a>
 				<?php } ?>
-				<?php if($arResult['PROPERTIES']['STATUS']['VALUE'] == "Сдан" || 
-						$arResult['PROPERTIES']['STATUS']['VALUE'] =="Продажи завершены") { ?>
+				<?php if($status == "Сдан" || $status == "Продажи завершены") { ?>
 					<a href="#" class="testimonial-btn tertiary-btn">
 					<span class="tertiary-btn__text">Отзывы</span>
 					</a>
@@ -57,19 +61,26 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/imask.min.js");
 			</div>
 			</div>
 			<div class="make-an-appointment-wrapper">
-			<a href="/granat-vidget" target="_blank" class="flats-btn tertiary-btn">
-				<span class="tertiary-btn__text flats-btn__text">Квартиры</span>
-			</a>
-			<?php if($arResult['PROPERTIES']['STATUS']['VALUE'] == "Сдан" || 
-						$arResult['PROPERTIES']['STATUS']['VALUE'] =="Продажи завершены") { ?>
+
+			<?php if($status != "Продажи завершены") { ?>
+				<a href="/granat-vidget" target="_blank" class="flats-btn tertiary-btn">
+					<span class="tertiary-btn__text flats-btn__text">Квартиры</span>
+				</a>
+			<?php } ?>
+
+			<?php if($status == "Сдан" || $status == "Продажи завершены") { ?>
 				<a href="#" class="testimonial-btn tertiary-btn testimonial-mobile-btn">
 					<span class="tertiary-btn__text">Отзывы</span>
 				</a>
 			<?php } ?>
-			<a href="#booking-online-form-wrapper" class="make-an-appointment-btn primary-btn">
-				<span class="make-an-appointment-btn__text primary-btn__text">Записаться на встречу</span>
-				<img src="<?=SITE_TEMPLATE_PATH?>/images/arrow-right-white.png" class="make-an-appointment-btn__image primary-btn__image" alt="">
-			</a>
+
+			<?php if($status != "Продажи завершены") { ?>
+				<a href="#booking-online-form-wrapper" class="make-an-appointment-btn primary-btn">
+					<span class="make-an-appointment-btn__text primary-btn__text">Записаться на встречу</span>
+					<img src="<?=SITE_TEMPLATE_PATH?>/images/arrow-right-white.png" class="make-an-appointment-btn__image primary-btn__image" alt="">
+				</a>
+			<?php } ?>
+
 			</div>
 		</div>
 		<div class="horizontal-line"></div>
@@ -81,42 +92,44 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/imask.min.js");
 
 			<div class="details hidden-desktop">
 				<div class="details-title"><?=$arResult["NAME"]?></div>
-				<div class="details-city"><?=$arResult["CITY"]?>, <?=$arResult["ADDRESS"]?></div>
+				<div class="details-city"><?=$arResult['PROPERTIES']["CITY"]['VALUE']?>, <?=$arResult['PROPERTIES']["ADDRESS"]['VALUE']?></div>
 				<div class="details-row details-row-top">
-				<div class="title">Сдача дома</div>
-				<div class="value"><?=$arResult["COMPLETE_PERIOD"]?></div>
+					<div class="title">Сдача дома</div>
+					<div class="value"><?=$arResult['PROPERTIES']["COMPLETE_PERIOD"]['VALUE']?></div>
 				</div>
 				<div class="details-row">
-				<div class="title">Класс жилья</div>
-				<div class="value"><?=$arResult["HOUSE_CLASS"]?></div>
+					<div class="title">Класс жилья</div>
+					<div class="value"><?=$arResult['PROPERTIES']["HOUSE_CLASS"]['VALUE']?></div>
 				</div>
 				<div class="details-row">
-				<div class="title">Этажность</div>
-				<div class="value"><?=$arResult["FLOORS"]?></div>
+					<div class="title">Этажность</div>
+					<div class="value"><?=$arResult['PROPERTIES']["FLOORS"]['VALUE']?></div>
+				</div>
+				<!-- 
+				<div class="details-row">
+					<div class="title">Количество корпусов</div>
+					<div class="value"><?=$arResult['PROPERTIES']["BUILDINGS_COUNT"]['VALUE']?></div>
+				</div>
+				 -->
+				<div class="details-row">
+					<div class="title">Количество квартир</div>
+					<div class="value"><?=$arResult['PROPERTIES']["FLATS_COUNT"]['VALUE']?></div>
 				</div>
 				<div class="details-row">
-				<div class="title">Количество корпусов</div>
-				<div class="value"><?=$arResult["BUILDINGS_COUNT"]?></div>
+					<div class="title">Количество парковочных мест</div>
+					<div class="value"><?=$arResult['PROPERTIES']["PARKING_SPACES_COUNT"]['VALUE']?></div>
 				</div>
 				<div class="details-row">
-				<div class="title">Количество квартир</div>
-				<div class="value"><?=$arResult["FLATS_COUNT"]?></div>
+					<div class="title">Стоимость 1-комнатной квартиры</div>
+					<div class="value">4-5 млн.р.</div>
 				</div>
 				<div class="details-row">
-				<div class="title">Количество парковочных мест</div>
-				<div class="value"><?=$arResult["PARKING_SPACES_COUNT"]?></div>
+					<div class="title">Стоимость 2-комнатной квартиры</div>
+					<div class="value">5-6 млн.р.</div>
 				</div>
 				<div class="details-row">
-				<div class="title">Стоимость 1-комнатной квартиры</div>
-				<div class="value">4-5 млн.р.</div>
-				</div>
-				<div class="details-row">
-				<div class="title">Стоимость 2-комнатной квартиры</div>
-				<div class="value">5-6 млн.р.</div>
-				</div>
-				<div class="details-row">
-				<div class="title">Стоимость 3-комнатной квартиры</div>
-				<div class="value">6-7 млн.р.</div>
+					<div class="title">Стоимость 3-комнатной квартиры</div>
+					<div class="value">6-7 млн.р.</div>
 				</div>
 			</div>
 
@@ -153,42 +166,44 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/imask.min.js");
 				</div>
 
 				<div class="details hidden-mobile">
-					<div class="details-title">Гранат</div>
-					<div class="details-city">Южноуральск, Сергея Буландо 8</div>
+					<div class="details-title"><?=$arResult["NAME"]?></div>
+					<div class="details-city"><?=$arResult['PROPERTIES']["CITY"]['VALUE']?>, <?=$arResult['PROPERTIES']["ADDRESS"]['VALUE']?></div>
 					<div class="details-row details-row-top">
 						<div class="title">Сдача дома</div>
-						<div class="value">II кв. 2026 г.</div>
+						<div class="value"><?=$arResult['PROPERTIES']["COMPLETE_PERIOD"]['VALUE']?></div>
 					</div>
 					<div class="details-row">
 						<div class="title">Класс жилья</div>
-						<div class="value">Комфорт</div>
+						<div class="value"><?=$arResult['PROPERTIES']["HOUSE_CLASS"]['VALUE']?></div>
 					</div>
 					<div class="details-row">
 						<div class="title">Этажность</div>
-						<div class="value">11</div>
+						<div class="value"><?=$arResult['PROPERTIES']["FLOORS"]['VALUE']?></div>
 					</div>
+					<!-- 
 					<div class="details-row">
 						<div class="title">Количество корпусов</div>
-						<div class="value">1</div>
+						<div class="value"><?=$arResult['PROPERTIES']["BUILDINGS_COUNT"]['VALUE']?></div>
 					</div>
+					 -->
 					<div class="details-row">
 						<div class="title">Количество квартир</div>
-						<div class="value">126</div>
+						<div class="value"><?=$arResult['PROPERTIES']["FLATS_COUNT"]['VALUE']?></div>
 					</div>
 					<div class="details-row">
 						<div class="title">Количество парковочных мест</div>
-						<div class="value">68</div>
+						<div class="value"><?=$arResult['PROPERTIES']["PARKING_SPACES_COUNT"]['VALUE']?></div>
 					</div>
 					<div class="details-row">
-						<div class="title">1-комнатная квартира</div>
+						<div class="title">Стоимость 1-комнатной квартиры</div>
 						<div class="value">4-5 млн.р.</div>
 					</div>
 					<div class="details-row">
-						<div class="title">2-комнатная квартира</div>
+						<div class="title">Стоимость 2-комнатной квартиры</div>
 						<div class="value">5-6 млн.р.</div>
 					</div>
 					<div class="details-row">
-						<div class="title">3-комнатная квартира</div>
+						<div class="title">Стоимость 3-комнатной квартиры</div>
 						<div class="value">6-7 млн.р.</div>
 					</div>
 				</div>
@@ -211,18 +226,20 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/imask.min.js");
 		</div>
 	</div>
 
-	<div class="dark-frame-section section">
-		<div class="container">
-		<div class="dark-frame">
-			<div class="dark-frame__title primary-title">Осталось всего 3 квартиры, успейте реализовать свою мечту!</div>
-			<div class="dark-frame__text">в продаже 3 квартиры одинаковой планировки, площадью 68,89, стоимость 8,9 млн</div>
-			<a href="#" class="dark-frame-btn tertiary-btn">
-			<span class="tertiary-btn__text">Смотреть квартиры</span>
-			<img src="<?=SITE_TEMPLATE_PATH?>/images/arrow-right-blue.svg" class="tertiary-btn__image" alt="">
-			</a>
+	<?php if($status != "Продажи завершены") { ?>
+		<div class="dark-frame-section section">
+			<div class="container">
+			<div class="dark-frame">
+				<div class="dark-frame__title primary-title">Осталось всего 3 квартиры, успейте реализовать свою мечту!</div>
+				<div class="dark-frame__text">в продаже 3 квартиры одинаковой планировки, площадью 68,89, стоимость 8,9 млн</div>
+				<a href="#" class="dark-frame-btn tertiary-btn">
+				<span class="tertiary-btn__text">Смотреть квартиры</span>
+				<img src="<?=SITE_TEMPLATE_PATH?>/images/arrow-right-blue.svg" class="tertiary-btn__image" alt="">
+				</a>
+			</div>
+			</div>
 		</div>
-		</div>
-	</div>
+	<?php } ?>
 
 	<div class="location-section section">
 		<div class="container">
@@ -231,156 +248,39 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/imask.min.js");
 			<?php } ?>
 			<div class="paragraph-left-right paragraph-right"><?php echo $arResult['DETAIL_TEXT']; ?></div>
 			<div class="location-content">
-				<div class="location-content-item active">
-				<div class="description">
-					<div class="decription-title">
-					<span class="decription-title__number primary-title">01</span>
-					<span class="decription-title__text">Идеальные места для прогулок</span>
+
+				<?php
+				$arFilter = Array("IBLOCK_ID" => 8, "SECTION_ID" => $advantages);
+				$res1 = CIBlockElement::GetList(array(), $arFilter, false, Array("nPageSize"=>20));
+
+				$i = 1;
+				while($ob1 = $res1->GetNextElement()) {
+					$arFields1 = $ob1->GetFields(); ?>
+
+					<div class="location-content-item <?= $i == 1 ? 'active' : '' ?>">
+						<div class="description">
+							<div class="decription-title">
+							<span class="decription-title__number primary-title"><?php echo $i; ?></span>
+							<span class="decription-title__text"><?php echo $arFields1["NAME"]; ?></span>
+							</div>
+							<div class="description-text"><?php echo $arFields1["DETAIL_TEXT"]; ?></div>
+						</div>
+						<div class="location-image">
+							<?php
+							$detail_picture_id = $arFields1["DETAIL_PICTURE"];
+							$detail_picture_src = CFile::GetPath($detail_picture_id);
+
+							if ($detail_picture_src) { ?>
+								<img src="<?php echo $detail_picture_src; ?>" alt="">
+							<?php } else { ?> 
+								<img src="<?=SITE_TEMPLATE_PATH?>/images/no-photo.jpg" alt="">
+							<?php } ?>
+						</div>
 					</div>
-					<div class="description-text">
-					<p>Идеальные места для прогулок, отдыха и активного времяпрепровождения - наслаждаемся видом, свежим воздухом и проводим время после рабочего дня.</p>
-					<p>Всего в пяти минутах езды городские скверы.</p>
-					</div>
-				</div>
-				<div class="location-image">
-					<img src="<?=SITE_TEMPLATE_PATH?>/images/location-granat1.jpg" alt="">
-				</div>
-				</div>
-				<div class="location-content-item">
-				<div class="description">
-					<div class="decription-title">
-					<span class="decription-title__number primary-title">02</span>
-					<span class="decription-title__text">Разнообразие планировок</span>
-					</div>
-					<div class="description-text">
-					<p>Начните новую главу в уюте и гармонии.</p>
-					<p>ВЖК представлены разнообразные планировки, чтобы каждый мог выбрать идеальный вариант для себя - создадим свое пространство для жизни и отдыха!</p>
-					</div>
-				</div>
-				<div class="location-image">
-					<img src="<?=SITE_TEMPLATE_PATH?>/images/location-granat2.jpg" alt="">
-				</div>
-				</div>
-				<div class="location-content-item">
-				<div class="description">
-					<div class="decription-title">
-					<span class="decription-title__number primary-title">03</span>
-					<span class="decription-title__text">Квартиры с террасой</span>
-					</div>
-					<div class="description-text">
-					<p>Ощутите свободу и комфорт жизни в новом ЖК.</p>
-					<p>Квартиры с собственным выходом во двор — идеальное решение для тех, кто ценит приватность и удобство.</p>
-					</div>
-				</div>
-				<div class="location-image">
-					<img src="<?=SITE_TEMPLATE_PATH?>/images/location-granat3.jpg" alt="">
-				</div>
-				</div>
-				<div class="location-content-item">
-				<div class="description">
-					<div class="decription-title">
-					<span class="decription-title__number primary-title">04</span>
-					<span class="decription-title__text">Социальная инфраструктура</span>
-					</div>
-					<div class="description-text">
-					<p>Все, что нужно для уютного и гармоничного проживания.</p>
-					<p>В ЖК Гранат уже есть все необходимое для комфортной жизни: детские сады, школы, поликлиника - все в пешей доступности.</p>
-					</div>
-				</div>
-				<div class="location-image">
-					<img src="<?=SITE_TEMPLATE_PATH?>/images/location-granat4.jpg" alt="">
-				</div>
-				</div>
-				<div class="location-content-item">
-				<div class="description">
-					<div class="decription-title">
-					<span class="decription-title__number primary-title">05</span>
-					<span class="decription-title__text">Современные детские площадки</span>
-					</div>
-					<div class="description-text">
-					<p>Безопасное и яркое пространство для игр и развития.</p>
-					<p>Современные игровые комплексы, экологичные материалы и уютные зоны отдыха создают идеальные условия для активного отдыха малышей.</p>
-					</div>
-				</div>
-				<div class="location-image">
-					<img src="<?=SITE_TEMPLATE_PATH?>/images/location-granat5.jpg" alt="">
-				</div>
-				</div>
-				<div class="location-content-item">
-				<div class="description">
-					<div class="decription-title">
-					<span class="decription-title__number primary-title">06</span>
-					<span class="decription-title__text">Транспортная доступность</span>
-					</div>
-					<div class="description-text">
-					<p>Ваш новый дом уже рядом с нужными маршрутами.</p>
-					<p>В нескольких минутах ходьбы расположены остановки муниципального транспорта и автовокзал.</p>
-					</div>
-				</div>
-				<div class="location-image">
-					<img src="<?=SITE_TEMPLATE_PATH?>/images/location-granat6.jpg" alt="">
-				</div>
-				</div>
-				<div class="location-content-item">
-				<div class="description">
-					<div class="decription-title">
-					<span class="decription-title__number primary-title">07</span>
-					<span class="decription-title__text">Развитая инфраструктура</span>
-					</div>
-					<div class="description-text">
-					<p>Все необходимое для жизни в пешей доступности.</p>
-					<p>Примерно в 10 минутах ходьбы доступны: торговый комплекс, супермаркеты и магазинчики, фитнес комплексы, стоматологии. Все необходимое для жизни рядом!</p>
-					</div>
-				</div>
-				<div class="location-image">
-					<img src="<?=SITE_TEMPLATE_PATH?>/images/location-granat7.jpg" alt="">
-				</div>
-				</div>
-				<div class="location-content-item">
-				<div class="description">
-					<div class="decription-title">
-					<span class="decription-title__number primary-title">08</span>
-					<span class="decription-title__text">Создадим настроение</span>
-					</div>
-					<div class="description-text">
-					<p>Ландшафтная архитектура.</p>
-					<p>Новый подход к озеленению территории, современный ландшафтный дизайн с пространством для прогулок, местами для отдыха, знакомства иобщения.</p>
-					</div>
-				</div>
-				<div class="location-image">
-					<img src="<?=SITE_TEMPLATE_PATH?>/images/location-granat8.jpg" alt="">
-				</div>
-				</div>
-				<div class="location-content-item">
-				<div class="description">
-					<div class="decription-title">
-					<span class="decription-title__number primary-title">09</span>
-					<span class="decription-title__text">Комфортная среда</span>
-					</div>
-					<div class="description-text">
-					<p>Создаем комфорт для жизни.</p>
-					<p>Доступная среда, двор без машин, огороженная территория, возможность установки видеонаблюдения и системы контроля доступа.</p>
-					</div>
-				</div>
-				<div class="location-image">
-					<img src="<?=SITE_TEMPLATE_PATH?>/images/location-granat9.jpg" alt="">
-				</div>
-				</div>
-				<div class="location-content-item">
-				<div class="description">
-					<div class="decription-title">
-					<span class="decription-title__number primary-title">10</span>
-					<span class="decription-title__text">Современный ЖК в Южноуральске</span>
-					</div>
-					<div class="description-text">
-					<p>ЖК с продуманными решениями для комфортного проживания.</p>
-					<p>Чистовая отделка. Дом оборудован велопарковками и колясочными. Есть квартиры собственным входом и уютной террасой.</p>
-					</div>
-				</div>
-				<div class="location-image">
-					<img src="<?=SITE_TEMPLATE_PATH?>/images/location-granat10.jpg" alt="">
-				</div>
-				</div>
+					<?php
+					$i++;
+				} ?>
+
 				<a href="#" class="map-btn quaternary-btn hidden-mobile">
 				<span class="quaternary-btn__text">Смотреть на карте</span>
 				<img src="<?=SITE_TEMPLATE_PATH?>/images/arrow-right-white.png" class="quaternary-btn__image" alt="">
@@ -396,100 +296,30 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/imask.min.js");
 					<span></span>
 				</div>
 				</div>
-
 				<div class="location-advantages-slider swiper">
-				<div class="swiper-wrapper">
-					<div class="location-advantages-slider-item swiper-slide">
-					<div class="location-advantages-slider-item__content">
-						<div class="location-advantages-slider-item__title">Идеальные места для прогулок</div>
-						<div class="location-advantages-slider-item__description">Идеальные места для прогулок, отдыха и активного времяпрепровождения - наслаждаемся видом, свежим воздухом и проводим время после рабочего дня</div>
+					<div class="swiper-wrapper">
+						<?php
+						$res2 = CIBlockElement::GetList(array(), $arFilter, false, Array("nPageSize"=>20));
+						while($ob2 = $res2->GetNextElement()) {
+							$arFields2 = $ob2->GetFields();	
+							$detail_picture_id = $arFields2["DETAIL_PICTURE"];
+							$detail_picture_src = CFile::GetPath($detail_picture_id);
+							?>
+							<div class="location-advantages-slider-item swiper-slide">
+								<div class="location-advantages-slider-item__content">
+									<div class="location-advantages-slider-item__title"><?php echo $arFields2["NAME"]; ?></div>
+									<div class="location-advantages-slider-item__description"><?php echo strip_tags($arFields2["DETAIL_TEXT"]); ?></div>
+								</div>
+								<div class="location-advantages-slider-item__image">
+									<?php if ($detail_picture_src) { ?>
+										<img src="<?php echo $detail_picture_src; ?>" alt="">
+									<?php } else { ?> 
+										<img src="<?=SITE_TEMPLATE_PATH?>/images/no-photo.jpg" alt="">
+									<?php } ?>
+								</div>
+							</div>
+						<?php } ?>
 					</div>
-					<div class="location-advantages-slider-item__image">
-						<img src="<?=SITE_TEMPLATE_PATH?>/images/location-granat1.jpg" alt="">
-					</div>
-					</div>
-					<div class="location-advantages-slider-item swiper-slide">
-					<div class="location-advantages-slider-item__content">
-						<div class="location-advantages-slider-item__title">Разнообразие планировок</div>
-						<div class="location-advantages-slider-item__description">В ЖК представлены разнообразные планировки, чтобы каждый мог выбрать идеальный вариант для себя - создадим свое пространство для жизни и отдыха!</div>
-					</div>
-					<div class="location-advantages-slider-item__image">
-						<img src="<?=SITE_TEMPLATE_PATH?>/images/location-granat2.jpg" alt="">
-					</div>
-					</div>
-					<div class="location-advantages-slider-item swiper-slide">
-					<div class="location-advantages-slider-item__content">
-						<div class="location-advantages-slider-item__title">Квартиры с террасой</div>
-						<div class="location-advantages-slider-item__description">Квартиры с собственным выходом во двор — идеальное решение для тех, кто ценит приватность и удобство</div>
-					</div>
-					<div class="location-advantages-slider-item__image">
-						<img src="<?=SITE_TEMPLATE_PATH?>/images/location-granat3.jpg" alt="">
-					</div>
-					</div>
-					<div class="location-advantages-slider-item swiper-slide">
-					<div class="location-advantages-slider-item__content">
-						<div class="location-advantages-slider-item__title">Социальная инфраструктура</div>
-						<div class="location-advantages-slider-item__description">В ЖК Гранат уже есть все необходимое для комфортной жизни: детские сады, школы, поликлиника - все в пешей доступности</div>
-					</div>
-					<div class="location-advantages-slider-item__image">
-						<img src="<?=SITE_TEMPLATE_PATH?>/images/location-granat4.jpg" alt="">
-					</div>
-					</div>
-					<div class="location-advantages-slider-item swiper-slide">
-					<div class="location-advantages-slider-item__content">
-						<div class="location-advantages-slider-item__title">Современные детские площадки</div>
-						<div class="location-advantages-slider-item__description">Современные игровые комплексы, экологичные материалы и уютные зоны отдыха создают идеальные условия для активного отдыха малышей</div>
-					</div>
-					<div class="location-advantages-slider-item__image">
-						<img src="<?=SITE_TEMPLATE_PATH?>/images/location-granat5.jpg" alt="">
-					</div>
-					</div>
-					<div class="location-advantages-slider-item swiper-slide">
-					<div class="location-advantages-slider-item__content">
-						<div class="location-advantages-slider-item__title">Транспортная доступность</div>
-						<div class="location-advantages-slider-item__description">В нескольких минутах ходьбы расположены остановки муниципального транспорта и автовокзал</div>
-					</div>
-					<div class="location-advantages-slider-item__image">
-						<img src="<?=SITE_TEMPLATE_PATH?>/images/location-granat6.jpg" alt="">
-					</div>
-					</div>
-					<div class="location-advantages-slider-item swiper-slide">
-					<div class="location-advantages-slider-item__content">
-						<div class="location-advantages-slider-item__title">Развитая инфраструктура</div>
-						<div class="location-advantages-slider-item__description">Примерно в 10 минутах ходьбы доступны: торговый комплекс, супермаркеты и магазинчики, фитнес комплексы, стоматологии</div>
-					</div>
-					<div class="location-advantages-slider-item__image">
-						<img src="<?=SITE_TEMPLATE_PATH?>/images/location-granat7.jpg" alt="">
-					</div>
-					</div>
-					<div class="location-advantages-slider-item swiper-slide">
-					<div class="location-advantages-slider-item__content">
-						<div class="location-advantages-slider-item__title">Создадим настроение</div>
-						<div class="location-advantages-slider-item__description">Новый подход к озеленению территории, современный ландшафтный дизайн с пространством для прогулок, местами для отдыха, знакомства и общения</div>
-					</div>
-					<div class="location-advantages-slider-item__image">
-						<img src="<?=SITE_TEMPLATE_PATH?>/images/location-granat8.jpg" alt="">
-					</div>
-					</div>
-					<div class="location-advantages-slider-item swiper-slide">
-					<div class="location-advantages-slider-item__content">
-						<div class="location-advantages-slider-item__title">Комфортная среда</div>
-						<div class="location-advantages-slider-item__description">Доступная среда, двор без машин, огороженная территория, возможность установки видеонаблюдения и системы контроля доступа</div>
-					</div>
-					<div class="location-advantages-slider-item__image">
-						<img src="<?=SITE_TEMPLATE_PATH?>/images/location-granat9.jpg" alt="">
-					</div>
-					</div>
-					<div class="location-advantages-slider-item swiper-slide">
-					<div class="location-advantages-slider-item__content">
-						<div class="location-advantages-slider-item__title">Современный ЖК в Южноуральске</div>
-						<div class="location-advantages-slider-item__description">Чистовая отделка. Дом оборудован велопарковками и колясочными. Есть квартиры собственным входом и уютной террасой</div>
-					</div>
-					<div class="location-advantages-slider-item__image">
-						<img src="<?=SITE_TEMPLATE_PATH?>/images/location-granat10.jpg" alt="">
-					</div>
-					</div>
-				</div>
 				</div>
 			</div>
 
@@ -501,211 +331,135 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/imask.min.js");
 		</div>
 	</div>
 
-	<div id="booking-online-form-wrapper" class="booking-online-form-wrapper">
-		<div class="container">
-		<div class="form-wrapper">
-			<div class="form-title primary-title">Узнать подробнее</div>
-			<div class="form-text">оставьте заявку и наш менеджер с вами свяжется в ближайшее время</div>
-			<form id="booking-online-form" class="form">
-			<div class="flex-container">
-				<div class="form-group">
-				<label for="name" class="label">Имя*</label>
-				<input type="text" name="name" id="name" class="input-field" autocomplete="on" placeholder="Введите имя">
+	<?php if($status != "Продажи завершены") { ?>
+		<div id="booking-online-form-wrapper" class="booking-online-form-wrapper <?= $working_progress ? '' : 'section' ?>">
+			<div class="container">
+			<div class="form-wrapper">
+				<div class="form-title primary-title">Узнать подробнее</div>
+				<div class="form-text">оставьте заявку и наш менеджер с вами свяжется в ближайшее время</div>
+				<form id="booking-online-form" class="form">
+				<div class="flex-container">
+					<div class="form-group">
+					<label for="name" class="label">Имя*</label>
+					<input type="text" name="name" id="name" class="input-field" autocomplete="on" placeholder="Введите имя">
+					</div>
+					<div class="form-group">
+					<label for="email" class="label">Email*</label>
+					<input type="email" name="email" id="email" class="input-field" autocomplete="on" placeholder="pochta@mail.ru">
+					</div>
+					<div class="form-group">
+					<label for="phone" class="label">Телефон*</label>
+					<input type="text" name="phone" id="phone" class="input-field js-input-phone-mask" autocomplete="on" placeholder="+7 (999) 999 99 99">
+					</div>
+					<button id="callback-submit-btn3" class="submit-btn primary-btn">
+					<span class="primary-btn__text">Отправить заявку</span>
+					</button>
 				</div>
-				<div class="form-group">
-				<label for="email" class="label">Email*</label>
-				<input type="email" name="email" id="email" class="input-field" autocomplete="on" placeholder="pochta@mail.ru">
+				<div class="checkboxes-flex-container">
+					<div class="agreement-text">
+					<input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback3" required onchange="document.getElementById('callback-submit-btn3').disabled = !this.checked;">
+					<label for="checkbox-read-callback3" class="custom-checkbox-label"></label>
+					<span class="checkbox-text">Ознакомлен (-на) с <a href="/privacy-policy.html" class="privacy-policy-link" target="_blank">политикой конфиденциальности</a></span>
+					</div>
+					<div class="agreement-text">
+					<input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-callback3" required onchange="document.getElementById('callback-submit-btn3').disabled = !this.checked;">
+					<label for="checkbox-agree-callback3" class="custom-checkbox-label"></label>
+					<span class="checkbox-text">Я согласен (-на) на <a href="/soglasie-posetitelya-sajta-na-obrabotku-personalnyh-dannyh.html" class="agreement-link" target="_blank">обработку персональных данных</a></span>
+					</div>
 				</div>
-				<div class="form-group">
-				<label for="phone" class="label">Телефон*</label>
-				<input type="text" name="phone" id="phone" class="input-field js-input-phone-mask" autocomplete="on" placeholder="+7 (999) 999 99 99">
-				</div>
-				<button id="callback-submit-btn3" class="submit-btn primary-btn">
-				<span class="primary-btn__text">Отправить заявку</span>
-				</button>
+				</form>
 			</div>
-			<div class="checkboxes-flex-container">
-				<div class="agreement-text">
-				<input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback3" required onchange="document.getElementById('callback-submit-btn3').disabled = !this.checked;">
-				<label for="checkbox-read-callback3" class="custom-checkbox-label"></label>
-				<span class="checkbox-text">Ознакомлен (-на) с <a href="/privacy-policy.html" class="privacy-policy-link" target="_blank">политикой конфиденциальности</a></span>
-				</div>
-				<div class="agreement-text">
-				<input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-callback3" required onchange="document.getElementById('callback-submit-btn3').disabled = !this.checked;">
-				<label for="checkbox-agree-callback3" class="custom-checkbox-label"></label>
-				<span class="checkbox-text">Я согласен (-на) на <a href="/soglasie-posetitelya-sajta-na-obrabotku-personalnyh-dannyh.html" class="agreement-link" target="_blank">обработку персональных данных</a></span>
-				</div>
 			</div>
-			</form>
 		</div>
-		</div>
-	</div>
+	<?php } ?>
 
-	<?php
-	if($arResult['PROPERTIES']['WORKING_PROGRESS']['VALUE']) {
+	<?php if($working_progress) {
+		$arOrder = Array("ID" => "DESC");
 		$arSelectedFields = Array("ID","IBLOCK_ID", "NAME", "PROPERTY_*", );
-		$arFilter = Array("IBLOCK_ID"=>7, "SECTION_ID" => $arResult['PROPERTIES']['WORKING_PROGRESS']['VALUE']);
-		$res = CIBlockElement::GetList(Array(), $arFilter, false, Array("nPageSize"=>3), $arSelectedFields);
-
-		while($ob = $res->GetNextElement()) {
-			
-			$arFields = $ob->GetFields();
-			$arProps = $ob->GetProperties();
-			echo "<h3>" . $arFields["NAME"] . "</h3>";
-
-			foreach($arProps["MORE_PHOTO"]["VALUE"] as $FILE) {   
-
-				$src = CFile::GetPath($FILE);
-
-				echo $src . "<br>";
-
-			}
+		$arFilter = Array("IBLOCK_ID"=>7, "SECTION_ID" => $working_progress);
+		$res = CIBlockElement::GetList($arOrder, $arFilter, false, Array("nPageSize"=>3), $arSelectedFields); ?>
 		
-		}
+		<div class="working-progress-section section">
+			<div class="container">
+			<div class="section-title primary-title">Ход строительства</div>
+				<div class="grid-container">
+					<?php while($ob = $res->GetNextElement()) {
+						$arFields = $ob->GetFields();
+						$arProps = $ob->GetProperties(); ?>
 
-	}
-	?>
+						<div class="working-progress-item">
+							<div class="working-progress-gallery">
 
-	<div class="working-progress-section section">
-		<div class="container">
-		<div class="section-title primary-title">Ход строительства</div>
-			<div class="grid-container">
+								<?php foreach($arProps["MORE_PHOTO"]["VALUE"] as $FILE) {   
+									$src = CFile::GetPath($FILE); ?>
 
-				<div class="working-progress-item">
-					<div class="working-progress-gallery">
-						<figure class="working-progress-gallery-item">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-august1.jpg" data-pswp-width="600" data-pswp-height="900" target="_blank">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-august1.jpg" alt="">
-						</a>
-						</figure>
-						<figure class="working-progress-gallery-item">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-august2.jpg" data-pswp-width="600" data-pswp-height="900" target="_blank">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-august2.jpg" alt="">
-						</a>
-						</figure>
-						<figure class="working-progress-gallery-item">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-august3.jpg" data-pswp-width="600" data-pswp-height="900" target="_blank">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-august3.jpg" alt="">
-						</a>
-						</figure>
-						<figure class="working-progress-gallery-item">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-august4.jpg" data-pswp-width="600" data-pswp-height="900" target="_blank">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-august4.jpg" alt="">
-						</a>
-						</figure>
-					</div>
-					<div class="working-progress-item__date">Август 2025</div>
-					<div class="working-progress-item__arrow blur-arrow-right">
-						<img src="<?=SITE_TEMPLATE_PATH?>/images/advantages-arrow-right.png" alt="">
-					</div>
+									<figure class="working-progress-gallery-item">
+										<a href="<?php echo $src; ?>" data-pswp-width="600" data-pswp-height="900" target="_blank">
+											<img src="<?php echo $src; ?>" alt="">
+										</a>
+									</figure>
+
+								<?php } ?>								
+
+							</div>
+							<div class="working-progress-item__date"><?php echo $arFields["NAME"]; ?></div>
+							<div class="working-progress-item__arrow blur-arrow-right">
+								<img src="<?=SITE_TEMPLATE_PATH?>/images/advantages-arrow-right.png" alt="">
+							</div>
+						</div>
+
+					<?php }  ?>
 				</div>
-
-				<div class="working-progress-item">
-					<div class="working-progress-gallery">
-						<figure class="working-progress-gallery-item">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-july1.jpg" data-pswp-width="600" data-pswp-height="900" target="_blank">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-july1.jpg" alt="">
-						</a>
-						</figure>
-						<figure class="working-progress-gallery-item">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-july2.jpg" data-pswp-width="600" data-pswp-height="900" target="_blank">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-july2.jpg" alt="">
-						</a>
-						</figure>
-						<figure class="working-progress-gallery-item">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-july3.jpg" data-pswp-width="600" data-pswp-height="900" target="_blank">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-july3.jpg" alt="">
-						</a>
-						</figure>
-						<figure class="working-progress-gallery-item">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-july4.jpg" data-pswp-width="600" data-pswp-height="900" target="_blank">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-july4.jpg" alt="">
-						</a>
-						</figure>
-					</div>
-					<div class="working-progress-item__date">Июль 2025</div>
-					<div class="working-progress-item__arrow blur-arrow-right">
-						<img src="<?=SITE_TEMPLATE_PATH?>/images/advantages-arrow-right.png" alt="">
-					</div>
-				</div>
-
-				<div class="working-progress-item hidden-mobile">
-					<div class="working-progress-gallery">
-						<figure class="working-progress-gallery-item">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-june1.jpg" data-pswp-width="600" data-pswp-height="900" target="_blank">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-june1.jpg" alt="">
-						</a>
-						</figure>
-						<figure class="working-progress-gallery-item">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-june2.jpg" data-pswp-width="600" data-pswp-height="900" target="_blank">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-june2.jpg" alt="">
-						</a>
-						</figure>
-						<figure class="working-progress-gallery-item">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-june3.jpg" data-pswp-width="600" data-pswp-height="900" target="_blank">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-june3.jpg" alt="">
-						</a>
-						</figure>
-						<figure class="working-progress-gallery-item">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-june4.jpg" data-pswp-width="600" data-pswp-height="900" target="_blank">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/granat-working-progress-june4.jpg" alt="">
-						</a>
-						</figure>
-					</div>
-					<div class="working-progress-item__date">Июнь 2025</div>
-					<div class="working-progress-item__arrow blur-arrow-right">
-						<img src="<?=SITE_TEMPLATE_PATH?>/images/advantages-arrow-right.png" alt="">
-					</div>
-				</div>
-				
 			</div>
 		</div>
-	</div>
 
-	<div class="office-map-section">
-		<div class="container">
-		<div class="office-map-wrapper">
-			<div class="office-map">
-				<img src="<?=SITE_TEMPLATE_PATH?>/images/temp-office-map.jpg" alt="">
-			</div>
-			<div class="address-card">
-			<div class="address-card__image">
-				<img src="<?php echo $arResult["DETAIL_PICTURE"]["SRC"]; ?>" alt="">
-			</div>
-			<div class="address-card__content">
-				<div class="address-card__title">Офис продаж</div>
-				<div class="address-card__name"><?=$arResult["NAME"]?></div>
-				<div class="address-item">
-				<div class="address-item__image">
-					<img src="<?=SITE_TEMPLATE_PATH?>/images/geolocation.svg" alt="">
+	<?php } ?>
+
+	<?php if($status != "Продажи завершены") { ?>
+		<div class="office-map-section">
+			<div class="container">
+			<div class="office-map-wrapper">
+				<div class="office-map">
+					<img src="<?=SITE_TEMPLATE_PATH?>/images/temp-office-map.jpg" alt="">
 				</div>
-				<div class="address-item__text">г. Челябинск, ул. Каслинская,д. 10, офис 123</div>
+				<div class="address-card">
+				<div class="address-card__image">
+					<img src="<?php echo $arResult["DETAIL_PICTURE"]["SRC"]; ?>" alt="">
 				</div>
-				<div class="address-item">
-				<div class="address-item__image">
-					<img src="<?=SITE_TEMPLATE_PATH?>/images/clock.svg" alt="">
+				<div class="address-card__content">
+					<div class="address-card__title">Офис продаж</div>
+					<div class="address-card__name"><?=$arResult["NAME"]?></div>
+					<div class="address-item">
+					<div class="address-item__image">
+						<img src="<?=SITE_TEMPLATE_PATH?>/images/geolocation.svg" alt="">
+					</div>
+					<div class="address-item__text">г. Челябинск, ул. Каслинская,д. 10, офис 123</div>
+					</div>
+					<div class="address-item">
+					<div class="address-item__image">
+						<img src="<?=SITE_TEMPLATE_PATH?>/images/clock.svg" alt="">
+					</div>
+					<div class="address-item__text">Ежедневно с 09:00 до 20:00</div>
+					</div>
+					<div class="address-item">
+					<div class="address-item__image">
+						<img src="<?=SITE_TEMPLATE_PATH?>/images/phone.svg" alt="">
+					</div>
+					<div class="address-item__text">+7 (999) 999 99 99</div>
+					</div>
+					<a href="/driving-map.html" class="driving-map-btn tertiary-btn">
+					<span class="driving-map-btn__text tertiary-btn__text">Схема проезда</span>
+					<img src="<?=SITE_TEMPLATE_PATH?>/images/map-pin.svg" class="driving-map-btn__image" alt="">
+					</a>
+					<a href="/contacts.html#booking-online-form-wrapper" class="make-an-appointment-btn primary-btn">
+					<span class="make-an-appointment-btn__text primary-btn__text">Записаться на встречу</span>
+					</a>
 				</div>
-				<div class="address-item__text">Ежедневно с 09:00 до 20:00</div>
 				</div>
-				<div class="address-item">
-				<div class="address-item__image">
-					<img src="<?=SITE_TEMPLATE_PATH?>/images/phone.svg" alt="">
-				</div>
-				<div class="address-item__text">+7 (999) 999 99 99</div>
-				</div>
-				<a href="/driving-map.html" class="driving-map-btn tertiary-btn">
-				<span class="driving-map-btn__text tertiary-btn__text">Схема проезда</span>
-				<img src="<?=SITE_TEMPLATE_PATH?>/images/map-pin.svg" class="driving-map-btn__image" alt="">
-				</a>
-				<a href="/contacts.html#booking-online-form-wrapper" class="make-an-appointment-btn primary-btn">
-				<span class="make-an-appointment-btn__text primary-btn__text">Записаться на встречу</span>
-				</a>
 			</div>
 			</div>
 		</div>
-		</div>
-	</div>
-
+	<?php } ?>
 </div>
 
 <script type="module">

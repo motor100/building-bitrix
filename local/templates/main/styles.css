@@ -1412,9 +1412,11 @@ iframe {
 }
 
 /* Карточка проекта выполненная */
+/*
 .project-detail-page .location-section {
   padding: 0 0 40px 0;
 }
+*/
 .project-detail-page .location-section-title {
   margin: 0 0 20px 0;
   letter-spacing: -1.5px;
@@ -1622,7 +1624,8 @@ iframe {
   height: 100%;
   object-fit: cover;
 }
-.project-detail-page .working-progress-section .working-progress-gallery-item {
+.project-detail-page .working-progress-section .working-progress-gallery-item,
+.project-detail-page .working-progress-section .working-progress-gallery-item a {
   display: block;
   margin: 0;
   width: 100%;
