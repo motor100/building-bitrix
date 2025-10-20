@@ -37,7 +37,9 @@ $APPLICATION->SetTitle($arResult["NAME"]);
   <div class="np-detail-content-section section">
     <div class="container">
       <div class="np-detail__date"><?php echo mb_substr($arResult["TIMESTAMP_X"], 0, 10); ?></div>
-      <!-- <div class="np-detail__excerpt">В жилом комплексе «Павелецкая Сити» до конца июля действует скидка 20%* на приобретение квартиры.</div> -->
+      <?php if($arResult["PREVIEW_TEXT"]) { ?>
+        <div class="np-detail__excerpt">В жилом комплексе «Павелецкая Сити» до конца июля действует скидка 20%* на приобретение квартиры.</div>
+      <?php } ?>
       <div class="np-detail__text"><?echo $arResult["DETAIL_TEXT"];?></div>
       <div class="np-detail__buttons">
         <div class="view-more-btn tertiary-btn">

@@ -14,6 +14,39 @@ $this->setFrameMode(true);
 $APPLICATION->SetTitle("Акции");
 ?>
 
+<div class="n-main-section">
+  <div class="container">
+    <div class="frame">
+      <div class="flex-container">
+        <div class="n-main-section__content">
+          <div class="n-main-section__title"><?=$arResult["ITEMS"][0]["NAME"]?></div>
+          <div class="n-main-section__excerpt"><?=$arResult["ITEMS"][0]["PREVIEW_TEXT"]?></div>
+          <a href="<?=$arResult["ITEMS"][0]["DETAIL_PAGE_URL"]?>" class="detail-btn secondary-btn">
+            <span class="secondary-btn__text">Подробнее о акции</span>
+          </a>
+        </div>
+        <div class="n-main-section__image">
+          <?php if ($arResult["ITEMS"][0]["DETAIL_PICTURE"]["SRC"]) { ?>
+            <img src="<?php echo $arResult["ITEMS"][0]["DETAIL_PICTURE"]["SRC"]; ?>" alt="">
+          <?php } else { ?>
+            <img src="<?=SITE_TEMPLATE_PATH?>/images/no-photo.jpg" alt="">
+          <?php } ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="breadcrumbs">
+  <div class="container">
+    <div class="parent">
+      <a href="/">Главная</a>
+    </div>
+    <div class="separator">|</div>
+    <div class="active">Акции</div>
+  </div>
+</div>
+
 <div class="news-section">
   <div class="container">
     <div class="grid-container">

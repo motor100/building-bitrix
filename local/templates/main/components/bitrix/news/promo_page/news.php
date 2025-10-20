@@ -19,35 +19,6 @@ $this->setFrameMode(true);
 
 <div class="news-page np-page">
 
-  <div class="n-main-section">
-    <div class="container">
-      <div class="frame">
-        <div class="flex-container">
-          <div class="n-main-section__content">
-            <div class="n-main-section__title">Название одной из акций</div>
-            <div class="n-main-section__excerpt">Иногда кажется, что мир вокруг замирает, и все краски тускнеют. В такие моменты особенно остро чувствуется потребность в чем-то новом, в глотке свежего воздуха, который пробудит мысли и заставит сердце биться чаще. Где же искать это неуловимое вдохновение?</div>
-            <a href="/promo-detail.html" class="detail-btn secondary-btn">
-              <span class="secondary-btn__text">Подробнее о акции</span>
-            </a>
-          </div>
-          <div class="n-main-section__image">
-            <img src="/images/temp-granat1.jpg" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="breadcrumbs">
-    <div class="container">
-      <div class="parent">
-        <a href="/">Главная</a>
-      </div>
-      <div class="separator">|</div>
-      <div class="active">Акции</div>
-    </div>
-  </div>
-
 	<?php
 	$APPLICATION->IncludeComponent(
 		"bitrix:news.list",
