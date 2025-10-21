@@ -2,6 +2,8 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Контакты");
 
+\Bitrix\Main\Loader::includeModule('iblock');
+
 use Bitrix\Main\Page\Asset;
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/slimselect.min.css");
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/air-datepicker.css");
@@ -86,23 +88,29 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/slimselect.min.js");
           <div class="flex-container">
             <div class="form-group">
               <label for="big-form-name" class="label">Имя*</label>
-              <input type="text" name="name" id="big-form-name" class="input-field" required autocomplete="on" placeholder="Введите имя">
+              <input type="text" name="name" id="big-form-name" class="input-field js-required-name" required placeholder="Введите имя" autocomplete="on">
             </div>
             <div class="form-group">
               <label for="big-form-email" class="label">Email*</label>
-              <input type="email" name="email" id="big-form-email" class="input-field" required autocomplete="on" placeholder="pochta@mail.ru">
+              <input type="email" name="email" id="big-form-email" class="input-field js-required-email" required placeholder="pochta@mail.ru" autocomplete="on">
             </div>
             <div class="form-group">
               <label for="big-form-phone" class="label">Телефон*</label>
-              <input type="text" name="phone" id="big-form-phone" class="input-field js-input-phone-mask" required autocomplete="on" placeholder="+7 (999) 999 99 99">
+              <input type="text" name="phone" id="big-form-phone" class="input-field js-required-phone js-input-phone-mask" required placeholder="+7 (999) 999 99 99" autocomplete="on">
             </div>
             <div class="form-group">
               <label for="big-form-project" class="label">Проект*</label>
-              <select name="project" id="big-form-project" required>
+              <select name="project" id="big-form-project" class="js-required-project" required autocomplete="off">
                 <option value="" data-placeholder="true">Выберите проект</option>
-                <option value="Островский">Островский</option>
-                <option value="Чурилово 3.20">Чурилово 3.20</option>
-                <option value="Гранат">Гранат</option>
+
+                <?php
+                $arFilter = Array("IBLOCK_ID" => 6, "SECTION_ID" => 5);
+                $res = CIBlockElement::GetList(array(), $arFilter, false, Array("nPageSize"=>5));
+
+                while($ob = $res->GetNextElement()) {
+                  $arFields = $ob->GetFields(); ?>
+                  <option value="<?php echo $arFields["NAME"]; ?>"><?php echo $arFields["NAME"]; ?></option>
+                <?php } ?>
               </select>
             </div>
           </div>
@@ -116,7 +124,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/slimselect.min.js");
             <div class="flex-container flex-container-bottom open-more-info js-open-more-info">
               <div class="form-group">
                 <label for="big-form-type-meeting" class="label">Тип встречи</label>
-                <select name="type-meeting" id="big-form-type-meeting">
+                <select name="type-meeting" id="big-form-type-meeting" autocomplete="off">
                   <option value="" data-placeholder="true">Выберите тип</option>
                   <option value="Оформление">Оформление</option>
                   <option value="Консультация">Консультация</option>
@@ -124,7 +132,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/slimselect.min.js");
               </div>
               <div class="form-group">
                 <label for="big-form-type-room" class="label">Тип недвижимости</label>
-                <select name="type-room" id="big-form-type-room">
+                <select name="type-room" id="big-form-type-room" autocomplete="off">
                   <option value="" data-placeholder="true">Выберите тип</option>
                   <option value="Квартира">Квартира</option>
                   <option value="Коммерция">Коммерция</option>
@@ -132,26 +140,26 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/slimselect.min.js");
               </div>
               <div class="form-group">
                 <label for="big-form-type-payment" class="label">Вид оплаты</label>
-                <select name="type-payment" id="big-form-type-payment">
+                <select name="type-payment" id="big-form-type-payment" autocomplete="off">
                   <option value="" data-placeholder="true">Выберите тип</option>
-                  <option value="Квартира">Собственные средства</option>
-                  <option value="Коммерция">Кредит</option>
+                  <option value="Собственные средства">Собственные средства</option>
+                  <option value="Кредит">Кредит</option>
                 </select>
               </div>
             </div>
-            <button id="callback-submit-btn3" class="submit-btn quaternary-btn">
+            <button type="button" id="big-booking-online-form-btn" class="submit-btn quaternary-btn">
               <span class="quaternary-btn__text">Записаться на встречу</span>
             </button>
           </div>            
           
           <div class="checkboxes-flex-container">
             <div class="agreement-text">
-              <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback4" required onchange="document.getElementById('callback-submit-btn4').disabled = !this.checked;">
+              <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback4" required onchange="document.getElementById('big-booking-online-form-btn').disabled = !this.checked;">
               <label for="checkbox-read-callback4" class="custom-checkbox-label"></label>
               <span class="checkbox-text">Ознакомлен (-на) с <a href="/privacy-policy.html" class="privacy-policy-link" target="_blank">политикой конфиденциальности</a></span>
             </div>
             <div class="agreement-text">
-              <input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-callback3" required onchange="document.getElementById('callback-submit-btn3').disabled = !this.checked;">
+              <input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-callback3" required onchange="document.getElementById('big-booking-online-form-btn').disabled = !this.checked;">
               <label for="checkbox-agree-callback3" class="custom-checkbox-label"></label>
               <span class="checkbox-text">Я согласен (-на) на <a href="/soglasie-posetitelya-sajta-na-obrabotku-personalnyh-dannyh.html" class="agreement-link" target="_blank">обработку персональных данных</a></span>
             </div>
