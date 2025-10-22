@@ -30,7 +30,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/slimselect.min.js");
         <div class="contacts-item c-item">
           <div class="contacts-item__title c-item__title">+7 999 999 99 99</div>
           <div class="contacts-item__text c-item__text">Единый телефон по вопросам приобретения недвижимости</div>
-          <button class="callback-btn primary-btn js-callback-form-btn">
+          <button class="callback-btn primary-btn js-callback-btn">
             <span class="callback-btn__text primary-btn__text">Перезвоните мне</span>
           </button>
         </div>

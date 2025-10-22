@@ -45,7 +45,7 @@ $APPLICATION->SetTitle($arResult["NAME"]);
         <div class="view-more-btn tertiary-btn">
           <span class="tertiary-btn__text">Подробнее о проекте</span>
         </div>
-        <div class="make-an-appointment-btn primary-btn js-callback-form-btn">
+        <div class="make-an-appointment-btn primary-btn js-callback-btn">
           <span class="primary-btn__text">Записаться на встречу</span>
         </div>
       </div>

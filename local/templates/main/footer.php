@@ -231,16 +231,16 @@
           <label for="phone-callback-modal" class="label">Телефон*</label>
           <input type="text" id="phone-callback-modal" class="input-field js-required-phone js-input-phone-mask" name="phone" required maxlength="18" autocomplete="on">
         </div>
-        <button type="button" id="callback-modal-btn" class="submit-btn primary-btn">
+        <button type="button" id="callback-modal-form-btn" class="submit-btn primary-btn">
           <span class="primary-btn__text">Отправить</span>
         </button>
         <div class="agreement-text">
-          <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback" required onchange="document.getElementById('callback-modal-btn').disabled = !this.checked;">
+          <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback" required onchange="document.getElementById('callback-modal-form-btn').disabled = !this.checked;">
           <label for="checkbox-read-callback" class="custom-checkbox-label"></label>
           <span class="checkbox-text">Я согласен (-на) с <a href="/politika-v-otnoshenii-obrabotki-personalnyh-dannyh/" class="privacy-policy-link" target="_blank">политикой конфиденциальности</a></span>
         </div>
         <div class="agreement-text">
-          <input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-callback" required onchange="document.getElementById('callback-modal-btn').disabled = !this.checked;">
+          <input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-callback" required onchange="document.getElementById('callback-modal-form-btn').disabled = !this.checked;">
           <label for="checkbox-agree-callback" class="custom-checkbox-label"></label>
           <span class="checkbox-text">Я согласен (-на) на <a href="/soglasie-posetitelya-sajta-na-obrabotku-personalnyh-dannyh/" class="agreement-link" target="_blank">обработку персональных данных</a></span>
         </div>

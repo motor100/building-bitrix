@@ -335,7 +335,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const testimonialBtn = document.querySelector('.js-testimonial-btn');
   const testimonialModal = document.querySelector('#testimonial-modal');
 
-  const callbackFormBtns = document.querySelectorAll('.js-callback-form-btn');
+  const callbackBtns = document.querySelectorAll('.js-callback-btn');
   const callbackModal = document.querySelector('#callback-modal');
   const modalCloseBtns = document.querySelectorAll('.modal-window .modal-close');
 
@@ -363,7 +363,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  callbackFormBtns.forEach((item) => {
+  callbackBtns.forEach((item) => {
     item.onclick = function () {
       modalWindowOpen(callbackModal);
     }
@@ -426,10 +426,10 @@ document.addEventListener("DOMContentLoaded", () => {
   inputPhoneMask();
 
 
-  // AJAX Отправка формы Заказать звонок
+  // AJAX Отправка формы Запись на встречу
   const bigBookingOnlineFormBtn = document.getElementById('big-booking-online-form-btn');
 
-  function ajaxCallback(form) {
+  function ajaxBookingOnline(form) {
 
     let arr = [];
 
@@ -496,8 +496,70 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (bigBookingOnlineFormBtn) {
-    bigBookingOnlineFormBtn.onclick = function(event) {
-      ajaxCallback(bigBookingOnlineForm);
+    bigBookingOnlineFormBtn.onclick = function() {
+      ajaxBookingOnline(bigBookingOnlineForm);
+    }
+  }
+
+
+  // AJAX Отправка формы Заказать звонок
+  const callbackModalForm = document.getElementById('callback-modal-form');
+  const callbackModalFormBtn = document.getElementById('callback-modal-form-btn');
+  
+
+  function ajaxCallback(form) {
+
+    let arr = [];
+
+    const inputName = form.querySelector('.js-required-name');
+    if (inputName.value.length < 3 || inputName.value.length > 30) {
+      inputName.classList.add('required');
+      arr.push(false);
+    } else {
+      inputName.classList.remove('required');
+    }
+
+    const inputPhone = form.querySelector('.js-required-phone');
+    if (inputPhone.value.length != 18) {
+      inputPhone.classList.add('required');
+      arr.push(false);
+    } else {
+      inputPhone.classList.remove('required');
+    }
+
+    const inputCheckboxes = form.querySelectorAll('.js-required-checkbox');
+    inputCheckboxes.forEach((item) => {
+      if (item.checked) {
+        item.classList.remove('required');
+      } else {
+        arr.push(false);
+        item.classList.add('required');
+      }
+    });
+
+    if (arr.length == 0) {
+
+      fetch('/local/templates/main/phpmailer/callback.php', {
+        method: 'POST',
+        cache: 'no-cache',
+        body: new FormData(form)
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+
+      alert("Спасибо. Мы свяжемся с вами.");
+
+      form.reset();
+
+    }
+
+    return false;
+  }
+
+  if(callbackModalFormBtn) {
+    callbackModalFormBtn.onclick = function() {
+      ajaxCallback(callbackModalForm);
     }
   }
 

@@ -3,19 +3,12 @@
 use PHPMailer\PHPMailer\PHPMailer;
 
 if (isset($_POST["name"]) &&
-   isset($_POST["email"]) && 
    isset($_POST["phone"]) && 
-   isset($_POST["project"]) && 
    isset($_POST["checkbox-read"]) &&
    isset($_POST["checkbox-agree"])) {
 
     $name = htmlspecialchars($_POST["name"]);
-    $email = htmlspecialchars($_POST["email"]);
     $phone = htmlspecialchars($_POST["phone"]);
-    $project = htmlspecialchars($_POST["project"]);
-    $type_meeting = htmlspecialchars($_POST["type-meeting"]);
-    $type_room = htmlspecialchars($_POST["type-room"]);
-    $type_payment = htmlspecialchars($_POST["type-payment"]);
     $checkbox_read = $_POST["checkbox-read"];
     $checkbox_agree = $_POST["checkbox-agree"];
 
@@ -51,17 +44,13 @@ if (isset($_POST["name"]) &&
 
     if (strlen($name) >= 3 &&
       strlen($name) <= 30 &&
-      strlen($email) >= 3 &&
-      strlen($email) <= 50 &&
       strlen($phone) == 18 && 
-      strlen($project) >= 3 &&
-      strlen($project) <= 30 &&
       $checkbox_read == "on" &&
       $checkbox_agree == "on") {
 
         // Тело письма
-        $mail->Body = "Запись на встречу<br> Имя: $name<br> Email: $email<br> Телефон: $phone<br> Проект: $project<br> Тип встречи: $type_meeting<br> Тип недвижимости: $type_room<br> Вид оплаты: $type_payment<br>";
-        $mail->AltBody = "Запись на встречу\r\n Имя: $name\r\n Email: $email\r\n Телефон: $phone\r\n Проект: $project\r\n Тип встречи: $type_meeting\r\n Тип недвижимости: $type_room\r\n Вид оплаты: $type_payment\r\n";
+        $mail->Body = "Заказать звонок<br> Имя: $name<br> Телефон: $phone<br>";
+        $mail->AltBody = "Заказать звонок\r\n Имя: $name\r\n Телефон: $phone\r\n";
 
         $mail->send();
     }
