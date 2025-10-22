@@ -47,7 +47,6 @@ $APPLICATION->SetTitle("Наши проекты");
         <div class="container">
             <div class="projects-section-title">В продаже</div>
 
-
             <?php
             $APPLICATION->IncludeComponent(
                 "bitrix:news.list",

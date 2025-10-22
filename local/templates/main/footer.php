@@ -19,30 +19,35 @@
       <div class="footer-menu">
         <div class="bottom-menu">
           <div class="menu-title">Наши проекты</div>
-          <a href="#" class="menu-item">Гранат</a>
-          <a href="#" class="menu-item">Островский</a>
-          <a href="#" class="menu-item">Чурилово 3.20</a>
+
+          <?php
+          $arFilter = Array("IBLOCK_ID" => 6, "SECTION_ID" => 5);
+          $res = CIBlockElement::GetList(array(), $arFilter, false, Array("nPageSize"=>5));
+
+          while($ob = $res->GetNextElement()) {
+            $arFields = $ob->GetFields(); ?>
+            <a href="<?=$arFields["DETAIL_PAGE_URL"]?>" class="menu-item"><?php echo $arFields["NAME"]; ?></a>
+          <?php } ?>
+
         </div>
         <div class="bottom-menu">
           <div class="menu-title">Недвижимость</div>
-          <a href="#" class="menu-item">Жилая</a>
-          <a href="#" class="menu-item">Коммерческая</a>
+          <a href="/projects" class="menu-item">Жилая</a>
         </div>
         <div class="bottom-menu">
           <div class="menu-title">Клиентам</div>
           <a href="/promo" class="menu-item">Акции</a>
           <a href="/mortgage" class="menu-item">Ипотека</a>
-          <a href="#" class="menu-item">Отзывы</a>
           <a href="/contacts" class="menu-item">Контакты</a>
         </div>
         <div class="bottom-menu">
           <div class="menu-title">О компании</div>
-          <a href="#" class="menu-item">О нас</a>
-          <a href="#" class="menu-item">Партнерам</a>
-          <a href="#" class="menu-item">Вакансии</a>
-          <a href="#" class="menu-item">Новости</a>
-          <a href="#" class="menu-item">Документы</a>
-          <a href="#" class="menu-item">Реквизиты</a>
+          <a href="/about-company" class="menu-item">О нас</a>
+          <a href="/partners" class="menu-item">Партнерам</a>
+          <a href="/vacancy" class="menu-item">Вакансии</a>
+          <a href="/documents" class="menu-item">Документы</a>
+          <a href="/requisites" class="menu-item">Реквизиты</a>
+          <a href="/contacts" class="menu-item">Контакты</a>
         </div>
       </div>
       <div class="contacts">

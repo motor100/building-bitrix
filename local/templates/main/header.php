@@ -69,9 +69,6 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
               <a href="/requisites" class="sub-menu-item__link">Реквизиты</a>
             </li>
             <li class="sub-menu-item">
-              <a href="/testimonials" class="sub-menu-item__link">Отзывы</a>
-            </li>
-            <li class="sub-menu-item">
               <a href="/contacts" class="sub-menu-item__link">Контакты</a>
             </li>
           </ul>
