@@ -249,5 +249,8 @@
   </div>
 </div>
 
+<script src="<?=SITE_TEMPLATE_PATH?>/js/imask.min.js"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/script.js"></script>
+
 </body>
 </html>
