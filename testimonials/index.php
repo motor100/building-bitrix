@@ -1,6 +1,10 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Наш отзывы");
+
+use Bitrix\Main\Page\Asset;
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/swiper-bundle.min.css");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/swiper-bundle.min.js");
 ?>
 
 <div class="breadcrumbs">
@@ -92,6 +96,34 @@ $APPLICATION->SetTitle("Наш отзывы");
             <div class="testimonials-item__name">Морозов Алексей</div>
           </div>
           <div class="testimonials-item__text">Были в гостевом доме так сказать проездом на 4 дня. Очень хорошие, радушные хозяива,в номерах всё чистенько. Хочу отметить столовую очень вкусно готовят. Спасибо вам большое!!</div>
+        </div>
+      </div>
+
+      <div class="testimonials-slider-wrapper hidden-desktop">
+        <div class="testimonials-slider swiper">
+          <div class="swiper-wrapper">
+          <div class="testimonials-item swiper-slide">
+            <div class="flex-container">
+            <div class="testimonials-item__letter">М</div>
+            <div class="testimonials-item__name">Морозов Алексей</div>
+            </div>
+            <div class="testimonials-item__text">Сервис понравился. Сервис компании АЛЕАН понравился. Изначально выбрали другой отель, но потом выбор пал на другой отель, компания сделала нам возврат денежных средств в полном объеме. За что огромное спасибо. Сервис понравился. Сервис понравился.</div>
+          </div>
+          <div class="testimonials-item swiper-slide">
+            <div class="flex-container">
+            <div class="testimonials-item__letter">М</div>
+            <div class="testimonials-item__name">Иванов Иван</div>
+            </div>
+            <div class="testimonials-item__text">Отдыхали в этом доме с 01.07.23 по 12.07.23 с дочерью и подругой с детьми. Нам всё очень понравилось, нас встретили в аэропорту и привезли, очень удобно. Дети были в восторге от бассейна. Нам очень понравилась домашняя кухня, которая находится прямо в этом доме, цены бюджетные, блюда разнообразные. Обязательно вернёмся туда ещё раз.. жных средств в полном объеме. За что огромное спасибо. Сервис понравился. Сервис понравился.</div>
+          </div>
+          <div class="testimonials-item swiper-slide">
+            <div class="flex-container">
+            <div class="testimonials-item__letter">М</div>
+            <div class="testimonials-item__name">Морозов Алексей</div>
+            </div>
+            <div class="testimonials-item__text">Были в гостевом доме так сказать проездом на 4 дня. Очень хорошие, радушные хозяива,в номерах всё чистенько. Хочу отметить столовую очень вкусно готовят. Спасибо вам большое!!</div>
+          </div>
+          </div>
         </div>
       </div>
 

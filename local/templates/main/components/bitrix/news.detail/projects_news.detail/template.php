@@ -452,39 +452,13 @@ $advantages = $arResult['PROPERTIES']['ADVANTAGES']['VALUE'];
 				  <div class="testimonials-item__text">Были в гостевом доме так сказать проездом на 4 дня. Очень хорошие, радушные хозяива,в номерах всё чистенько. Хочу отметить столовую очень вкусно готовят. Спасибо вам большое!!</div>
 				</div>
 			</div>
-			<div class="testimonials-slider-wrapper hidden-desktop">
-				<div class="testimonials-slider swiper">
-				  <div class="swiper-wrapper">
-					<div class="testimonials-item swiper-slide">
-					  <div class="flex-container">
-						<div class="testimonials-item__letter">М</div>
-						<div class="testimonials-item__name">Морозов Алексей</div>
-					  </div>
-					  <div class="testimonials-item__text">Сервис понравился. Сервис компании АЛЕАН понравился. Изначально выбрали другой отель, но потом выбор пал на другой отель, компания сделала нам возврат денежных средств в полном объеме. За что огромное спасибо. Сервис понравился. Сервис понравился.</div>
-					</div>
-					<div class="testimonials-item swiper-slide">
-					  <div class="flex-container">
-						<div class="testimonials-item__letter">М</div>
-						<div class="testimonials-item__name">Иванов Иван</div>
-					  </div>
-					  <div class="testimonials-item__text">Отдыхали в этом доме с 01.07.23 по 12.07.23 с дочерью и подругой с детьми. Нам всё очень понравилось, нас встретили в аэропорту и привезли, очень удобно. Дети были в восторге от бассейна. Нам очень понравилась домашняя кухня, которая находится прямо в этом доме, цены бюджетные, блюда разнообразные. Обязательно вернёмся туда ещё раз.. жных средств в полном объеме. За что огромное спасибо. Сервис понравился. Сервис понравился.</div>
-					</div>
-					<div class="testimonials-item swiper-slide">
-					  <div class="flex-container">
-						<div class="testimonials-item__letter">М</div>
-						<div class="testimonials-item__name">Морозов Алексей</div>
-					  </div>
-					  <div class="testimonials-item__text">Были в гостевом доме так сказать проездом на 4 дня. Очень хорошие, радушные хозяива,в номерах всё чистенько. Хочу отметить столовую очень вкусно готовят. Спасибо вам большое!!</div>
-					</div>
-				  </div>
-				</div>
-			</div>
+			
 			<div class="testimonials-buttons">
-				<a href="#" class="view-all-testimonials-btn tertiary-btn">
+				<a href="/testimonials" class="view-all-testimonials-btn tertiary-btn">
 					<span class="tertiary-btn__text">Смотреть все отзывы</span>
 					<img src="<?=SITE_TEMPLATE_PATH?>/images/arrow-right-blue.svg" class="tertiary-btn__image" alt="">
 				</a>
-				<a href="#" class="add-testimonials-btn quaternary-btn">
+				<a href="/testimonials#add-testimonials" class="add-testimonials-btn quaternary-btn">
 					<span class="quaternary-btn__text">Написать отзыв</span>
 				</a>
 			</div>
