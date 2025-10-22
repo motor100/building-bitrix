@@ -16,5 +16,4 @@ $arUrlRewrite=array (
     'PATH' => '/promo/index.php',
     'SORT' => 100,
   ),
-
 );

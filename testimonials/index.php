@@ -9,169 +9,57 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/swiper-bundle.min.js");
 
 <div class="breadcrumbs">
   <div class="container">
-    <div class="parent">
-      <a href="/">Главная</a>
-    </div>
-    <div class="separator">|</div>
-    <div class="active">Наши отзывы</div>
+	<div class="parent">
+	  <a href="/">Главная</a>
+	</div>
+	<div class="separator">|</div>
+	<div class="active">Наши отзывы</div>
   </div>
 </div>
 
 <div class="testimonials-page">
 
   <div class="testimonials-section section">
-    <div class="container">
-      <div class="section-title-wrapper">
-        <div class="section-title primary-title">Наши отзывы</div>
-        <div class="swiper-nav">
-          <div class="swiper-prev">
-            <span></span>
-          </div>
-          <div class="swiper-next">
-            <span></span>
-          </div>
-        </div>        
-      </div>
+	<div class="container">
+	  	<div class="section-title-wrapper">
+			<div class="section-title primary-title">Наши отзывы</div>
+			<div class="swiper-nav">
+			  <div class="swiper-prev">
+				<span></span>
+			  </div>
+			  <div class="swiper-next">
+				<span></span>
+			  </div>
+			</div>        
+	  	</div>
 
-      <div class="grid-container hidden-mobile">
-        <div class="testimonials-item">
-          <div class="flex-container">
-            <div class="testimonials-item__letter">М</div>
-            <div class="testimonials-item__name">Морозов Алексей</div>
-          </div>
-          <div class="testimonials-item__text">Сервис понравился. Сервис компании АЛЕАН понравился. Изначально выбрали другой отель, но потом выбор пал на другой отель, компания сделала нам возврат денежных средств в полном объеме. За что огромное спасибо. Сервис понравился. Сервис понравился.</div>
-        </div>
-        <div class="testimonials-item">
-          <div class="flex-container">
-            <div class="testimonials-item__letter">М</div>
-            <div class="testimonials-item__name">Иванов Иван</div>
-          </div>
-          <div class="testimonials-item__text">Отдыхали в этом доме с 01.07.23 по 12.07.23 с дочерью и подругой с детьми. Нам всё очень понравилось, нас встретили в аэропорту и привезли, очень удобно. Дети были в восторге от бассейна. Нам очень понравилась домашняя кухня, которая находится прямо в этом доме, цены бюджетные, блюда разнообразные. Обязательно вернёмся туда ещё раз.. жных средств в полном объеме. За что огромное спасибо. Сервис понравился. Сервис понравился.</div>
-        </div>
-        <div class="testimonials-item">
-          <div class="flex-container">
-            <div class="testimonials-item__letter">М</div>
-            <div class="testimonials-item__name">Морозов Алексей</div>
-          </div>
-          <div class="testimonials-item__text">Были в гостевом доме так сказать проездом на 4 дня. Очень хорошие, радушные хозяива,в номерах всё чистенько. Хочу отметить столовую очень вкусно готовят. Спасибо вам большое!!</div>
-        </div>
-                <div class="testimonials-item">
-          <div class="flex-container">
-            <div class="testimonials-item__letter">М</div>
-            <div class="testimonials-item__name">Морозов Алексей</div>
-          </div>
-          <div class="testimonials-item__text">Сервис понравился. Сервис компании АЛЕАН понравился. Изначально выбрали другой отель, но потом выбор пал на другой отель, компания сделала нам возврат денежных средств в полном объеме. За что огромное спасибо. Сервис понравился. Сервис понравился.</div>
-        </div>
-        <div class="testimonials-item">
-          <div class="flex-container">
-            <div class="testimonials-item__letter">М</div>
-            <div class="testimonials-item__name">Иванов Иван</div>
-          </div>
-          <div class="testimonials-item__text">Отдыхали в этом доме с 01.07.23 по 12.07.23 с дочерью и подругой с детьми. Нам всё очень понравилось, нас встретили в аэропорту и привезли, очень удобно. Дети были в восторге от бассейна. Нам очень понравилась домашняя кухня, которая находится прямо в этом доме, цены бюджетные, блюда разнообразные. Обязательно вернёмся туда ещё раз.. жных средств в полном объеме. За что огромное спасибо. Сервис понравился. Сервис понравился.</div>
-        </div>
-        <div class="testimonials-item">
-          <div class="flex-container">
-            <div class="testimonials-item__letter">М</div>
-            <div class="testimonials-item__name">Морозов Алексей</div>
-          </div>
-          <div class="testimonials-item__text">Были в гостевом доме так сказать проездом на 4 дня. Очень хорошие, радушные хозяива,в номерах всё чистенько. Хочу отметить столовую очень вкусно готовят. Спасибо вам большое!!</div>
-        </div>
-                <div class="testimonials-item">
-          <div class="flex-container">
-            <div class="testimonials-item__letter">М</div>
-            <div class="testimonials-item__name">Морозов Алексей</div>
-          </div>
-          <div class="testimonials-item__text">Сервис понравился. Сервис компании АЛЕАН понравился. Изначально выбрали другой отель, но потом выбор пал на другой отель, компания сделала нам возврат денежных средств в полном объеме. За что огромное спасибо. Сервис понравился. Сервис понравился.</div>
-        </div>
-        <div class="testimonials-item">
-          <div class="flex-container">
-            <div class="testimonials-item__letter">М</div>
-            <div class="testimonials-item__name">Иванов Иван</div>
-          </div>
-          <div class="testimonials-item__text">Отдыхали в этом доме с 01.07.23 по 12.07.23 с дочерью и подругой с детьми. Нам всё очень понравилось, нас встретили в аэропорту и привезли, очень удобно. Дети были в восторге от бассейна. Нам очень понравилась домашняя кухня, которая находится прямо в этом доме, цены бюджетные, блюда разнообразные. Обязательно вернёмся туда ещё раз.. жных средств в полном объеме. За что огромное спасибо. Сервис понравился. Сервис понравился.</div>
-        </div>
-        <div class="testimonials-item">
-          <div class="flex-container">
-            <div class="testimonials-item__letter">М</div>
-            <div class="testimonials-item__name">Морозов Алексей</div>
-          </div>
-          <div class="testimonials-item__text">Были в гостевом доме так сказать проездом на 4 дня. Очень хорошие, радушные хозяива,в номерах всё чистенько. Хочу отметить столовую очень вкусно готовят. Спасибо вам большое!!</div>
-        </div>
-      </div>
+		<?$APPLICATION->IncludeComponent(
+			"bitrix:forum.topic.reviews", 
+			"project_reviews", 
+			array(
+				"FORUM_ID" => "1",
+				"IBLOCK_TYPE" => "services",
+				"IBLOCK_ID" => "6",
+				"ELEMENT_ID" => "34",
+				"URL_TEMPLATES_READ" => "read.php?FID=#FID#&TID=#TID#",
+				"URL_TEMPLATES_DETAIL" => "photo_detail.php?ID=#ELEMENT_ID#",
+				"URL_TEMPLATES_PROFILE_VIEW" => "profile_view.php?UID=#UID#",
+				"MESSAGES_PER_PAGE" => "10",
+				"PAGE_NAVIGATION_TEMPLATE" => "",
+				"EDITOR_CODE_DEFAULT" => "Y",
+				"SHOW_AVATAR" => "Y",
+				"SHOW_RATING" => "N",
+				"RATING_TYPE" => "",
+				"USE_CAPTCHA" => "Y",
+				"PREORDER" => "Y",
+				"CACHE_TYPE" => "A",
+				"CACHE_TIME" => "0",
+				"COMPONENT_TEMPLATE" => "project_reviews"
+			),
+			false
+		);?>
 
-      <div class="testimonials-slider-wrapper hidden-desktop">
-        <div class="testimonials-slider swiper">
-          <div class="swiper-wrapper">
-          <div class="testimonials-item swiper-slide">
-            <div class="flex-container">
-            <div class="testimonials-item__letter">М</div>
-            <div class="testimonials-item__name">Морозов Алексей</div>
-            </div>
-            <div class="testimonials-item__text">Сервис понравился. Сервис компании АЛЕАН понравился. Изначально выбрали другой отель, но потом выбор пал на другой отель, компания сделала нам возврат денежных средств в полном объеме. За что огромное спасибо. Сервис понравился. Сервис понравился.</div>
-          </div>
-          <div class="testimonials-item swiper-slide">
-            <div class="flex-container">
-            <div class="testimonials-item__letter">М</div>
-            <div class="testimonials-item__name">Иванов Иван</div>
-            </div>
-            <div class="testimonials-item__text">Отдыхали в этом доме с 01.07.23 по 12.07.23 с дочерью и подругой с детьми. Нам всё очень понравилось, нас встретили в аэропорту и привезли, очень удобно. Дети были в восторге от бассейна. Нам очень понравилась домашняя кухня, которая находится прямо в этом доме, цены бюджетные, блюда разнообразные. Обязательно вернёмся туда ещё раз.. жных средств в полном объеме. За что огромное спасибо. Сервис понравился. Сервис понравился.</div>
-          </div>
-          <div class="testimonials-item swiper-slide">
-            <div class="flex-container">
-            <div class="testimonials-item__letter">М</div>
-            <div class="testimonials-item__name">Морозов Алексей</div>
-            </div>
-            <div class="testimonials-item__text">Были в гостевом доме так сказать проездом на 4 дня. Очень хорошие, радушные хозяива,в номерах всё чистенько. Хочу отметить столовую очень вкусно готовят. Спасибо вам большое!!</div>
-          </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="add-testimonials" class="testimonials-buttons js-testimonial-btn">
-        <a href="#" class="add-testimonials-btn quaternary-btn">
-          <span class="quaternary-btn__text">Написать отзыв</span>
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <div id="testimonial-modal" class="modal-window write-us-modal testimonial-modal">
-    <div class="modal-wrapper">
-      <div class="modal-area">
-        <div class="modal-close">
-          <div class="close"></div>
-        </div>
-        <div class="modal-title">Напишите отзыв</div>
-        <form id="testimonial-modal-form" class="form" method="post">
-          <div class="form-group">
-            <label for="name-testimonial-modal" class="label">Имя*</label>
-            <input type="text" id="name-testimonial-modal" class="input-field js-required-name" name="name" required autocomplete="on" minlength="3" maxlength="50" autocomplete="on">
-          </div>
-          <div class="form-group">
-            <label for="email-testimonial-modal" class="label">Email*</label>
-            <input type="email" id="email-testimonial-modal" class="input-field js-required-email" name="email" required autocomplete="on" minlength="3" maxlength="50" autocomplete="on">
-          </div>
-          <div class="form-group">
-            <label for="message-testimonial-modal" class="label">Сообщение*</label>
-            <textarea type="message" id="message-testimonial-modal" class="input-field textarea js-required-message" name="message" required minlength="3" maxlength="300" autocomplete="off"></textarea>
-          </div>
-          <button type="button" id="testimonial-modal-btn" class="submit-btn primary-btn">
-            <span class="primary-btn__text">Отправить</span>
-          </button>
-          <div class="agreement-text">
-              <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-testimonial" required onchange="document.getElementById('testimonial-modal-btn').disabled = !this.checked;">
-              <label for="checkbox-read-testimonial" class="custom-checkbox-label"></label>
-              <span class="checkbox-text">Я согласен (-на) с <a href="/politika-v-otnoshenii-obrabotki-personalnyh-dannyh/" class="privacy-policy-link" target="_blank">политикой конфиденциальности</a></span>
-            </div>
-            <div class="agreement-text">
-              <input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-testimonial" required onchange="document.getElementById('testimonial-modal-btn').disabled = !this.checked;">
-              <label for="checkbox-agree-testimonial" class="custom-checkbox-label"></label>
-              <span class="checkbox-text">Я согласен (-на) на <a href="/soglasie-posetitelya-sajta-na-obrabotku-personalnyh-dannyh/" class="agreement-link" target="_blank">обработку персональных данных</a></span>
-            </div>
-        </form>
-      </div>
-    </div>
+	</div>
   </div>
 
 </div>

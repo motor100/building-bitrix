@@ -415,55 +415,7 @@ $advantages = $arResult['PROPERTIES']['ADVANTAGES']['VALUE'];
 
 	<?php } ?>
 
-	<div class="testimonials-section section">
-		<div class="container">
-			<div class="section-title-wrapper">
-				<div class="section-title primary-title">Отзывы</div>
-				<div class="swiper-nav">
-					<div class="swiper-prev">
-						<span></span>
-					</div>
-					<div class="swiper-next">
-						<span></span>
-					</div>
-				</div>
-			</div>
-
-			<div class="grid-container hidden-mobile">
-				<div class="testimonials-item">
-				  <div class="flex-container">
-					<div class="testimonials-item__letter">М</div>
-					<div class="testimonials-item__name">Морозов Алексей</div>
-				  </div>
-				  <div class="testimonials-item__text">Сервис понравился. Сервис компании АЛЕАН понравился. Изначально выбрали другой отель, но потом выбор пал на другой отель, компания сделала нам возврат денежных средств в полном объеме. За что огромное спасибо. Сервис понравился. Сервис понравился.</div>
-				</div>
-				<div class="testimonials-item">
-				  <div class="flex-container">
-					<div class="testimonials-item__letter">М</div>
-					<div class="testimonials-item__name">Иванов Иван</div>
-				  </div>
-				  <div class="testimonials-item__text">Отдыхали в этом доме с 01.07.23 по 12.07.23 с дочерью и подругой с детьми. Нам всё очень понравилось, нас встретили в аэропорту и привезли, очень удобно. Дети были в восторге от бассейна. Нам очень понравилась домашняя кухня, которая находится прямо в этом доме, цены бюджетные, блюда разнообразные. Обязательно вернёмся туда ещё раз.. жных средств в полном объеме. За что огромное спасибо. Сервис понравился. Сервис понравился.</div>
-				</div>
-				<div class="testimonials-item">
-				  <div class="flex-container">
-					<div class="testimonials-item__letter">М</div>
-					<div class="testimonials-item__name">Морозов Алексей</div>
-				  </div>
-				  <div class="testimonials-item__text">Были в гостевом доме так сказать проездом на 4 дня. Очень хорошие, радушные хозяива,в номерах всё чистенько. Хочу отметить столовую очень вкусно готовят. Спасибо вам большое!!</div>
-				</div>
-			</div>
-			
-			<div class="testimonials-buttons">
-				<a href="/testimonials" class="view-all-testimonials-btn tertiary-btn">
-					<span class="tertiary-btn__text">Смотреть все отзывы</span>
-					<img src="<?=SITE_TEMPLATE_PATH?>/images/arrow-right-blue.svg" class="tertiary-btn__image" alt="">
-				</a>
-				<a href="/testimonials#add-testimonials" class="add-testimonials-btn quaternary-btn">
-					<span class="quaternary-btn__text">Написать отзыв</span>
-				</a>
-			</div>
-		</div>
-	</div>
+	
 
 	<?php if($status != "Продажи завершены") { ?>
 		<div class="office-map-section">
@@ -510,6 +462,40 @@ $advantages = $arResult['PROPERTIES']['ADVANTAGES']['VALUE'];
 			</div>
 		</div>
 	<?php } ?>
+
+	<div class="testimonials-section section">
+		<div class="container">
+			<div class="section-title primary-title">Отзывы</div>
+
+			<?$APPLICATION->IncludeComponent(
+				"bitrix:forum.topic.reviews", 
+				"project_reviews", 
+				array(
+					"FORUM_ID" => "1",
+					"IBLOCK_TYPE" => "services",
+					"IBLOCK_ID" => "6",
+					"ELEMENT_ID" => $arResult['ID'],
+					"URL_TEMPLATES_READ" => "read.php?FID=#FID#&TID=#TID#",
+					"URL_TEMPLATES_DETAIL" => "photo_detail.php?ID=#ELEMENT_ID#",
+					"URL_TEMPLATES_PROFILE_VIEW" => "profile_view.php?UID=#UID#",
+					"MESSAGES_PER_PAGE" => "6",
+					"PAGE_NAVIGATION_TEMPLATE" => "",
+					"EDITOR_CODE_DEFAULT" => "Y",
+					"SHOW_AVATAR" => "Y",
+					"SHOW_RATING" => "N",
+					"RATING_TYPE" => "",
+					"USE_CAPTCHA" => "Y",
+					"PREORDER" => "Y",
+					"CACHE_TYPE" => "A",
+					"CACHE_TIME" => "0",
+					"COMPONENT_TEMPLATE" => "project_reviews"
+				),
+				false
+			);?>
+
+		</div>
+	</div>
+
 </div>
 
 <script type="module">

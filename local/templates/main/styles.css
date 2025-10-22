@@ -1677,6 +1677,9 @@ iframe {
   font-size: 18px;
   line-height: 1.2;
 }
+.testimonials-section .testimonials-item.reviews-post-hidden {
+  background-color: pink;
+}
 .testimonials-section .flex-container {
   display: flex;
   margin-bottom: 20px;
