@@ -306,12 +306,12 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/imask.min.js");
               <div class="agreement-text">
                 <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback4" required onchange="document.getElementById('big-booking-online-form-btn').disabled = !this.checked;">
                 <label for="checkbox-read-callback4" class="custom-checkbox-label"></label>
-                <span class="checkbox-text">Ознакомлен (-на) с <a href="/privacy-policy.html" class="privacy-policy-link" target="_blank">политикой конфиденциальности</a></span>
+                <span class="checkbox-text">Ознакомлен (-на) с <a href="/privacy-policy" class="privacy-policy-link" target="_blank">политикой конфиденциальности</a></span>
               </div>
               <div class="agreement-text">
                 <input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-callback3" required onchange="document.getElementById('big-booking-online-form-btn').disabled = !this.checked;">
                 <label for="checkbox-agree-callback3" class="custom-checkbox-label"></label>
-                <span class="checkbox-text">Я согласен (-на) на <a href="/soglasie-posetitelya-sajta-na-obrabotku-personalnyh-dannyh.html" class="agreement-link" target="_blank">обработку персональных данных</a></span>
+                <span class="checkbox-text">Я согласен (-на) на <a href="/agreement" class="agreement-link" target="_blank">обработку персональных данных</a></span>
               </div>
             </div>
           </form>

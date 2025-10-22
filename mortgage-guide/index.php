@@ -10,7 +10,7 @@ $APPLICATION->SetTitle("Гид по ипотек");
     </div>
     <div class="separator">|</div>
     <div class="parent">
-      <a href="/mortgage.html">Ипотека</a>
+      <a href="/mortgage">Ипотека</a>
     </div>
     <div class="active">Гид по ипотеке</div>
   </div>

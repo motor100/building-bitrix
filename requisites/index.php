@@ -10,7 +10,7 @@ $APPLICATION->SetTitle("Реквизиты");
     </div>
     <div class="separator">|</div>
     <div class="parent">
-      <a href="/documents.html">Документы</a>
+      <a href="/documents">Документы</a>
     </div>
     <div class="active">Реквизиты</div>
   </div>
