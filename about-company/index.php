@@ -296,7 +296,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/swiper-bundle.min.js");
       <?php
       $APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	"projects", 
+	"projects_home", 
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_ELEMENT_CHAIN" => "Y",

@@ -4317,6 +4317,9 @@ iframe {
     height: 400px;
     border-radius: 20px;
   }
+  .about-company-page .our-advantages-section .our-advantages-image {
+    height: 530px;
+  }
 
   /* Страница Контакты */
   .contacts-page .contacts-section .grid-container {
@@ -4893,6 +4896,9 @@ iframe {
     gap: 16px;
     flex-direction: column;
   }
+  .about-company-page .our-advantages-section .our-advantages-image {
+    height: 430px;
+  }
 
   /* Параграф текста левый и правый */
   .paragraph-left-right {
@@ -5375,6 +5381,9 @@ iframe {
   .about-company-page .our-values-section .our-values-item .our-values-item__star {
     width: 58px;
   }
+  .about-company-page .our-advantages-section .our-advantages-image {
+    height: 330px;
+  }
 
   /* Параграф текста левый и правый */
   .paragraph-left-right {
@@ -5423,7 +5432,19 @@ iframe {
 
   /* fixed bottom menu */
   .fixed-bottom-menu .menu-btn {
-    padding: 0 36px;
+    padding: 0 46px;
+  }
+
+  /* Соцсети */
+  .socials .socials-item {
+    border-color: var(--blue-color);
+  }
+  .socials .socials-item svg {
+    fill: var(--blue-color);
+    stroke: var(--blue-color);
+  }
+  .socials .socials-item .socials-item__text {
+    color: var(--blue-color);
   }
   
 }
@@ -5557,6 +5578,9 @@ iframe {
   .testimonials-section .section-title-wrapper .section-title {
     margin-bottom: 0;
   }
+  .testimonials-section .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   /* Параграф текста левый и правый */
   .paragraph-left-right {
@@ -5639,6 +5663,9 @@ iframe {
   }
   .about-company-page .description-section .black-frame {
     font-size: 20px;
+  }
+  .about-company-page .our-advantages-section .our-advantages-image {
+    height: 330px;
   }
 
   /* Страница 404 */
@@ -5772,6 +5799,11 @@ iframe {
     width: auto;
   }
 
+  /* Testimonials */
+  .testimonials-section .grid-container {
+    grid-template-columns: auto;
+  }
+
   /* Форма Забронировать онлайн */
   .booking-online-form-wrapper .form-wrapper {
     padding: 15px;
@@ -5793,7 +5825,7 @@ iframe {
     grid-template-columns: auto;
   }
   .documents-page .documents-item {
-    height: auto;
+    height: 60px;
     border-radius: 10px;
   }
 
@@ -5979,6 +6011,13 @@ iframe {
   .about-company-page .team-section .name__title {
     font-size: 22px;
   }
+  .about-company-page .t-image {
+    width: 100%;
+  }
+  .about-company-page .our-advantages-section .our-advantages-image {
+    height: 230px;
+    border-radius: 15px;
+  }
 
   /* Страница 404 */
   .page-404 .page-404-image {
@@ -6073,6 +6112,11 @@ iframe {
   }
   .about-company-page .description-section .black-frame {
     font-size: 16px;
+  }
+
+  /* fixed bottom menu */
+  .fixed-bottom-menu .menu-btn {
+    padding: 0 36px;
   }
 
   /* Страница 404 */
