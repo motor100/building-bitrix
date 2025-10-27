@@ -14,6 +14,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
   <link href="<?=SITE_TEMPLATE_PATH?>/images/favicon.svg" rel="icon" type="image/svg+xml" />
 
   <?php
+  \Bitrix\Main\Loader::includeModule('iblock');
   //use Bitrix\Main\Page\Asset;
   //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/imask.min.js");
   //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/script.js");

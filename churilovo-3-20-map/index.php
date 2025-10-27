@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Карта проектов");
+$APPLICATION->SetTitle("Карта");
 ?>
 
 <div class="breadcrumbs">
@@ -9,7 +9,7 @@ $APPLICATION->SetTitle("Карта проектов");
       <a href="/">Главная</a>
     </div>
     <div class="separator">|</div>
-    <div class="active">Карта проектов</div>
+    <div class="active">Карта</div>
   </div>
 </div>
 
@@ -21,7 +21,7 @@ $APPLICATION->SetTitle("Карта проектов");
 	"projects_map", 
 	array(
 		"INIT_MAP_TYPE" => "MAP",
-		"MAP_DATA" => "a:4:{s:10:\"yandex_lat\";d:54.79673898133102;s:10:\"yandex_lon\";d:61.14980773738396;s:12:\"yandex_scale\";i:8;s:10:\"PLACEMARKS\";a:3:{i:0;a:3:{s:3:\"LON\";d:61.277491615329;s:3:\"LAT\";d:54.437792204025;s:4:\"TEXT\";s:12:\"Гранат\";}i:1;a:3:{s:3:\"LON\";d:61.38131603563;s:3:\"LAT\";d:55.189360455185;s:4:\"TEXT\";s:20:\"Островский\";}i:2;a:3:{s:3:\"LON\";d:61.51846127322688;s:3:\"LAT\";d:55.17368781709153;s:4:\"TEXT\";s:21:\"Чурилово 3.20\";}}}",
+		"MAP_DATA" => "a:4:{s:10:\"yandex_lat\";d:55.17355475929615;s:10:\"yandex_lon\";d:61.518449953513795;s:12:\"yandex_scale\";i:17;s:10:\"PLACEMARKS\";a:1:{i:0;a:3:{s:3:\"LON\";d:61.51846068234985;s:3:\"LAT\";d:55.17369445829371;s:4:\"TEXT\";s:21:\"Чурилово 3.20\";}}}",
 		"MAP_WIDTH" => "100%",
 		"MAP_HEIGHT" => "500px",
 		"CONTROLS" => array(

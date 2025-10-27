@@ -53,11 +53,11 @@ $advantages = $arResult['PROPERTIES']['ADVANTAGES']['VALUE'];
 						<img src="<?=SITE_TEMPLATE_PATH?>/images/arrow-right-white.png" class="view-more-btn__image quaternary-btn__image" alt="">
 					</a>
 				<?php } ?>
-				<?php if($status == "Сдан" || $status == "Продажи завершены") { ?>
-					<a href="#" class="testimonial-btn tertiary-btn">
-					<span class="tertiary-btn__text">Отзывы</span>
+				<?php //if($status == "Сдан" || $status == "Продажи завершены") { ?>
+					<a href="#testimonials-section" class="testimonial-btn tertiary-btn">
+						<span class="tertiary-btn__text">Отзывы</span>
 					</a>
-				<?php } ?>
+				<?php //} ?>
 			</div>
 			</div>
 			<div class="make-an-appointment-wrapper">
@@ -68,11 +68,11 @@ $advantages = $arResult['PROPERTIES']['ADVANTAGES']['VALUE'];
 				</a>
 			<?php } ?>
 
-			<?php if($status == "Сдан" || $status == "Продажи завершены") { ?>
-				<a href="#" class="testimonial-btn tertiary-btn testimonial-mobile-btn">
+			<?php //if($status == "Сдан" || $status == "Продажи завершены") { ?>
+				<a href="#testimonials-section" class="testimonial-btn tertiary-btn testimonial-mobile-btn">
 					<span class="tertiary-btn__text">Отзывы</span>
 				</a>
-			<?php } ?>
+			<?php //} ?>
 
 			<?php if($status != "Продажи завершены") { ?>
 				<a href="#booking-online-form-wrapper" class="make-an-appointment-btn primary-btn">
@@ -281,9 +281,9 @@ $advantages = $arResult['PROPERTIES']['ADVANTAGES']['VALUE'];
 					$i++;
 				} ?>
 
-				<a href="#" class="map-btn quaternary-btn hidden-mobile">
-				<span class="quaternary-btn__text">Смотреть на карте</span>
-				<img src="<?=SITE_TEMPLATE_PATH?>/images/arrow-right-white.png" class="quaternary-btn__image" alt="">
+				<a href="<?php echo $arResult['PROPERTIES']['MAP']['VALUE']; ?>" class="map-btn quaternary-btn hidden-mobile" target="_blank">
+					<span class="quaternary-btn__text">Смотреть на карте</span>
+					<img src="<?=SITE_TEMPLATE_PATH?>/images/arrow-right-white.png" class="quaternary-btn__image" alt="">
 				</a>
 			</div>
 
@@ -323,7 +323,7 @@ $advantages = $arResult['PROPERTIES']['ADVANTAGES']['VALUE'];
 				</div>
 			</div>
 
-			<a href="#" class="quaternary-btn map-mobile-btn">
+			<a href="<?php echo $arResult['PROPERTIES']['MAP']['VALUE']; ?>" class="quaternary-btn map-mobile-btn" target="_blank">
 				<span class="quaternary-btn__text">Смотреть на карте</span>
 				<img src="<?=SITE_TEMPLATE_PATH?>/images/arrow-right-white.png" class="quaternary-btn__image" alt="">
 			</a>
@@ -463,7 +463,8 @@ $advantages = $arResult['PROPERTIES']['ADVANTAGES']['VALUE'];
 		</div>
 	<?php } ?>
 
-	<div class="testimonials-section section">
+	<?php //if($status == "Сдан" || $status == "Продажи завершены") { ?>
+	<div id="testimonials-section" class="testimonials-section section">
 		<div class="container">
 			<div class="section-title primary-title">Отзывы</div>
 
@@ -492,9 +493,10 @@ $advantages = $arResult['PROPERTIES']['ADVANTAGES']['VALUE'];
 				),
 				false
 			);?>
-
+			<!-- "project_reviews", -->
 		</div>
 	</div>
+	<?php //} ?>
 
 </div>
 
