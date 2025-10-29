@@ -427,8 +427,6 @@ $promo = $arResult['PROPERTIES']['PROMO']['VALUE'];
 
 	<?php } ?>
 
-	
-
 	<?php if($status != "Продажи завершены") { ?>
 		<div class="office-map-section">
 			<div class="container">
@@ -465,7 +463,7 @@ $promo = $arResult['PROPERTIES']['PROMO']['VALUE'];
 					<span class="driving-map-btn__text tertiary-btn__text">Схема проезда</span>
 					<img src="<?=SITE_TEMPLATE_PATH?>/images/map-pin.svg" class="driving-map-btn__image" alt="">
 					</a>
-					<a href="/contacts#booking-online-form-wrapper" class="make-an-appointment-btn primary-btn">
+					<a href="/contacts#big-booking-online-form-wrapper" class="make-an-appointment-btn primary-btn">
 					<span class="make-an-appointment-btn__text primary-btn__text">Записаться на встречу</span>
 					</a>
 				</div>

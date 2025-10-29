@@ -22,7 +22,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/slimselect.min.js");
 
 <div class="contacts-page">
 
-  <div class="contacts-section">
+  <div class="contacts-section section">
     <div class="container">
       <div class="primary-title section-title">Контакты</div>
       

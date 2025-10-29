@@ -2356,6 +2356,10 @@ iframe {
   width: 100%;
   background-color: var(--lightgrey-color);
 }
+.contacts-page .booking-online-form-wrapper {
+  margin-top: calc(var(--margin-80) * -1);
+  padding-top: var(--margin-80);
+}
 
 /* Соцсети */
 .socials {
