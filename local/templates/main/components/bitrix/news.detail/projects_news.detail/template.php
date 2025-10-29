@@ -348,36 +348,37 @@ $promo = $arResult['PROPERTIES']['PROMO']['VALUE'];
 			<div class="form-wrapper">
 				<div class="form-title primary-title">Узнать подробнее</div>
 				<div class="form-text">оставьте заявку и наш менеджер с вами свяжется в ближайшее время</div>
-				<form id="booking-online-form" class="form">
-				<div class="flex-container">
-					<div class="form-group">
-					<label for="name" class="label">Имя*</label>
-					<input type="text" name="name" id="name" class="input-field" autocomplete="on" placeholder="Введите имя">
+				<form id="more-details-form" class="form">
+					<div class="flex-container">
+						<div class="form-group">
+						<label for="name" class="label">Имя*</label>
+						<input type="text" name="name" id="name" class="input-field js-required-name" autocomplete="on" placeholder="Введите имя">
+						</div>
+						<div class="form-group">
+						<label for="email" class="label">Email*</label>
+						<input type="email" name="email" id="email" class="input-field js-required-email" autocomplete="on" placeholder="pochta@mail.ru">
+						</div>
+						<div class="form-group">
+						<label for="phone" class="label">Телефон*</label>
+						<input type="text" name="phone" id="phone" class="input-field js-required-phone js-input-phone-mask" autocomplete="on" placeholder="+7 (999) 999 99 99">
+						</div>
+						<input type="hidden" name="project" class="js-required-project" value="<?php echo $arResult["NAME"]; ?>">
+						<button type="button" id="more-details-form-btn" class="submit-btn primary-btn">
+							<span class="primary-btn__text">Отправить заявку</span>
+						</button>
 					</div>
-					<div class="form-group">
-					<label for="email" class="label">Email*</label>
-					<input type="email" name="email" id="email" class="input-field" autocomplete="on" placeholder="pochta@mail.ru">
+					<div class="checkboxes-flex-container">
+						<div class="agreement-text">
+						<input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback3" required onchange="document.getElementById('more-details-form-btn').disabled = !this.checked;">
+						<label for="checkbox-read-callback3" class="custom-checkbox-label"></label>
+						<span class="checkbox-text">Ознакомлен (-на) с <a href="/privacy-policy" class="privacy-policy-link" target="_blank">политикой конфиденциальности</a></span>
+						</div>
+						<div class="agreement-text">
+						<input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-callback3" required onchange="document.getElementById('more-details-form-btn').disabled = !this.checked;">
+						<label for="checkbox-agree-callback3" class="custom-checkbox-label"></label>
+						<span class="checkbox-text">Я согласен (-на) на <a href="/agreement" class="agreement-link" target="_blank">обработку персональных данных</a></span>
+						</div>
 					</div>
-					<div class="form-group">
-					<label for="phone" class="label">Телефон*</label>
-					<input type="text" name="phone" id="phone" class="input-field js-input-phone-mask" autocomplete="on" placeholder="+7 (999) 999 99 99">
-					</div>
-					<button id="callback-submit-btn3" class="submit-btn primary-btn">
-					<span class="primary-btn__text">Отправить заявку</span>
-					</button>
-				</div>
-				<div class="checkboxes-flex-container">
-					<div class="agreement-text">
-					<input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback3" required onchange="document.getElementById('callback-submit-btn3').disabled = !this.checked;">
-					<label for="checkbox-read-callback3" class="custom-checkbox-label"></label>
-					<span class="checkbox-text">Ознакомлен (-на) с <a href="/privacy-policy" class="privacy-policy-link" target="_blank">политикой конфиденциальности</a></span>
-					</div>
-					<div class="agreement-text">
-					<input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-callback3" required onchange="document.getElementById('callback-submit-btn3').disabled = !this.checked;">
-					<label for="checkbox-agree-callback3" class="custom-checkbox-label"></label>
-					<span class="checkbox-text">Я согласен (-на) на <a href="/agreement" class="agreement-link" target="_blank">обработку персональных данных</a></span>
-					</div>
-				</div>
 				</form>
 			</div>
 			</div>

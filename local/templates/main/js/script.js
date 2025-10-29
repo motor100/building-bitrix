@@ -566,6 +566,83 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
+  // AJAX Отправка формы Узнать подробнее в детальной карточке проекта
+  const moreDetailsForm = document.getElementById('more-details-form');
+  const moreDetailsFormBtn = document.getElementById('more-details-form-btn');
+
+  function ajaxBookingOnline(form) {
+
+    let arr = [];
+
+    const inputName = form.querySelector('.js-required-name');
+    if (inputName.value.length < 3 || inputName.value.length > 30) {
+      inputName.classList.add('required');
+      arr.push(false);
+    } else {
+      inputName.classList.remove('required');
+    }
+
+    const inputEmail = form.querySelector('.js-required-email');
+    if (inputEmail.value.length < 3 || inputEmail.value.length > 50) {
+      inputEmail.classList.add('required');
+      arr.push(false);
+    } else {
+      inputEmail.classList.remove('required');
+    }
+
+    const inputPhone = form.querySelector('.js-required-phone');
+    if (inputPhone.value.length != 18) {
+      inputPhone.classList.add('required');
+      arr.push(false);
+    } else {
+      inputPhone.classList.remove('required');
+    }
+
+    const inputProject = form.querySelector('.js-required-project');
+    if (inputProject.value.length < 3 || inputProject.value.length > 50) {
+      inputProject.classList.add('required');
+      arr.push(false);
+    } else {
+      inputProject.classList.remove('required');
+    }
+
+    const inputCheckboxes = form.querySelectorAll('.js-required-checkbox');
+    inputCheckboxes.forEach((item) => {
+      if (item.checked) {
+        item.classList.remove('required');
+      } else {
+        arr.push(false);
+        item.classList.add('required');
+      }
+    });
+
+    if (arr.length == 0) {
+
+      fetch('/local/templates/main/phpmailer/more-details.php', {
+        method: 'POST',
+        cache: 'no-cache',
+        body: new FormData(form)
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+
+      alert("Спасибо. Мы свяжемся с вами.");
+
+      form.reset();
+
+    }
+
+    return false;
+  }
+
+  if(moreDetailsFormBtn) {
+    moreDetailsFormBtn.onclick = function() {
+      ajaxBookingOnline(moreDetailsForm);
+    }
+  }
+
+
   // Animation
   const animItems = document.querySelectorAll('._anim-items');
 
