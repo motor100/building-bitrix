@@ -44,11 +44,13 @@ $this->setFrameMode(true);
           ?>
         </div>
         <div class="horizontal-line"></div>
-        <div class="projects-item__price-text">Квартиры</div>
-        <div class="projects-item__price">от <?echo $arItem['PROPERTIES']['AREA']['VALUE']?> кв.м.</div>
+        <div class="projects-item__price-text">Площадь</div>
+        <div class="projects-item__price"><?echo $arItem['PROPERTIES']['AREA']['VALUE']?> кв.м.</div>
         <div class="flex-container">
-          <!-- <a href="#" class="projects-item__btn view-flats-btn">Смотреть квартиры</a> -->
           <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="projects-item__btn about-project-btn">О проекте</a>
+          <?php if ($arItem['PROPERTIES']['VIDGET_SMART_PLAN']['VALUE']) { ?>
+            <a href="<?php echo $arItem['PROPERTIES']['VIDGET_SMART_PLAN']['VALUE']; ?>" class="projects-item__btn view-flats-btn">Смотреть квартиры</a>
+          <?php } ?>
         </div>
       </div>
       <div class="projects-title"><?echo $arItem["NAME"]?></div>

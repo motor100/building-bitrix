@@ -23,6 +23,7 @@ $this->addExternalJs(SITE_TEMPLATE_PATH . "/js/imask.min.js");
 $working_progress = $arResult['PROPERTIES']['WORKING_PROGRESS']['VALUE'];
 $status = $arResult['PROPERTIES']['STATUS']['VALUE'];
 $advantages = $arResult['PROPERTIES']['ADVANTAGES']['VALUE'];
+$promo = $arResult['PROPERTIES']['PROMO']['VALUE'];
 ?>
 
 <div class="breadcrumbs">
@@ -227,18 +228,29 @@ $advantages = $arResult['PROPERTIES']['ADVANTAGES']['VALUE'];
 	</div>
 
 	<?php if($status != "Продажи завершены") { ?>
-		<div class="dark-frame-section section">
-			<div class="container">
-			<div class="dark-frame">
-				<div class="dark-frame__title primary-title">Осталось всего 3 квартиры, успейте реализовать свою мечту!</div>
-				<div class="dark-frame__text">в продаже 3 квартиры одинаковой планировки, площадью 68,89, стоимость 8,9 млн</div>
-				<a href="#" class="dark-frame-btn tertiary-btn">
-				<span class="tertiary-btn__text">Смотреть квартиры</span>
-				<img src="<?=SITE_TEMPLATE_PATH?>/images/arrow-right-blue.svg" class="tertiary-btn__image" alt="">
-				</a>
+		<?php if($promo) {
+			$arFilter3 = Array("IBLOCK_ID" => 9, "SECTION_ID" => $promo);
+			$res3 = CIBlockElement::GetList(array(), $arFilter3, false, Array("nPageSize"=>1));
+			$ob3 = $res3->GetNextElement();
+			$arFields3 = $ob3->GetFields();
+			$arProps3 = $ob3->GetProperties();
+			?>
+
+			<div class="dark-frame-section section">
+				<div class="container">
+				<div class="dark-frame">
+					<div class="dark-frame__title primary-title"><?php echo $arFields3["NAME"]; ?></div>
+					<div class="dark-frame__text"><?php echo $arFields3['DETAIL_TEXT']; ?></div>
+					<?php if($arProps3["LINK"]["VALUE"]) { ?>
+						<a href="<?php echo $arProps3["LINK"]["VALUE"]; ?>" class="dark-frame-btn tertiary-btn" target="_blank">
+							<span class="tertiary-btn__text">Смотреть квартиры</span>
+							<img src="<?=SITE_TEMPLATE_PATH?>/images/arrow-right-blue.svg" class="tertiary-btn__image" alt="">
+						</a>
+					<?php } ?>
+				</div>
+				</div>
 			</div>
-			</div>
-		</div>
+		<?php } ?>
 	<?php } ?>
 
 	<div class="location-section section">
@@ -251,12 +263,11 @@ $advantages = $arResult['PROPERTIES']['ADVANTAGES']['VALUE'];
 
 				<?php
 				$arFilter = Array("IBLOCK_ID" => 8, "SECTION_ID" => $advantages);
-				$res1 = CIBlockElement::GetList(array(), $arFilter, false, Array("nPageSize"=>20));
+				$res1 = CIBlockElement::GetList(array(), $arFilter, false, Array("nPageSize"=>10));
 
 				$i = 1;
 				while($ob1 = $res1->GetNextElement()) {
 					$arFields1 = $ob1->GetFields(); ?>
-
 					<div class="location-content-item <?= $i == 1 ? 'active' : '' ?>">
 						<div class="description">
 							<div class="decription-title">

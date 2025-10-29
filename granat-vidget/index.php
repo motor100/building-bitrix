@@ -1,8 +1,3 @@
-<?
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Документы");
-?>
-
 <!-- Начало Smart plan -->
 <script class="widget-smart-plan-336" async type="text/javascript">
     (function (d,w) {
@@ -28,5 +23,3 @@ $APPLICATION->SetTitle("Документы");
     })(document, window)
 </script>
 <!-- Конец Smart plan -->
-
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

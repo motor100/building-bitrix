@@ -35,7 +35,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/imask.min.js");
       <div class="projects-map-section-title primary-title section-title fullscreen__title _anim-items _anim-no-hide">Карта проектов</div>
       <div class="projects-map">
         <div class="projects-map__image">
-          <img src="<?=SITE_TEMPLATE_PATH?>/images/temp-office-map.jpg" alt="">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/projects-map-home.jpg" alt="">
         </div>
         <a href="/projects-map" class="projects-map-btn quaternary-btn">
           <span class="quaternary-btn__text">Смотреть карту проектов</span>
