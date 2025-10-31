@@ -36,18 +36,26 @@ $APPLICATION->SetTitle($arResult["NAME"]);
 
   <div class="np-detail-content-section section">
     <div class="container">
-      <div class="np-detail__date"><?php echo mb_substr($arResult["TIMESTAMP_X"], 0, 10); ?></div>
+      <?php if($arResult['PROPERTIES']['STOP_DATE']['VALUE']) { ?>
+        <div class="np-detail__date">Акция действует до <?php echo $arResult['PROPERTIES']['STOP_DATE']['VALUE']; ?></div>
+      <?php } ?>
       <?php if($arResult["PREVIEW_TEXT"]) { ?>
         <div class="np-detail__excerpt">В жилом комплексе «Павелецкая Сити» до конца июля действует скидка 20%* на приобретение квартиры.</div>
       <?php } ?>
       <div class="np-detail__text"><?echo $arResult["DETAIL_TEXT"];?></div>
+
+      <?
+      $res = CIBlockElement::GetByID($arResult['PROPERTIES']['PROJECT']['VALUE']);
+      $ar_res = $res->GetNext();
+      ?>
+
       <div class="np-detail__buttons">
-        <div class="view-more-btn tertiary-btn">
+        <a href="<?php echo $ar_res["DETAIL_PAGE_URL"]; ?>" class="view-more-btn tertiary-btn">
           <span class="tertiary-btn__text">Подробнее о проекте</span>
-        </div>
-        <div class="make-an-appointment-btn primary-btn js-callback-btn">
+        </a>
+        <a href="/contacts#big-booking-online-form-wrapper" class="make-an-appointment-btn primary-btn">
           <span class="primary-btn__text">Записаться на встречу</span>
-        </div>
+        </a>
       </div>
     </div>
   </div>

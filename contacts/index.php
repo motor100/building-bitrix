@@ -173,15 +173,14 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/slimselect.min.js");
     <div class="container">
       <div class="office-map-wrapper">
         <div class="office-map">
-          <img src="<?=SITE_TEMPLATE_PATH?>/images/temp-office-map.jpg" alt="">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/office-map.jpg" alt="">
         </div>
         <div class="address-card">
           <div class="address-card__image">
             <img src="<?=SITE_TEMPLATE_PATH?>/images/temp-address-card.jpg" alt="">
           </div>
           <div class="address-card__content">
-            <div class="address-card__title">Офис продаж</div>
-            <div class="address-card__name">ЖК Гранат</div>
+            <div class="address-card__title">Наши контакты</div>
             <div class="address-item">
               <div class="address-item__image">
                 <img src="<?=SITE_TEMPLATE_PATH?>/images/geolocation.svg" alt="">

@@ -1095,6 +1095,44 @@ iframe {
   line-height: 1.2;
 }
 
+/* Страница Вакансии */
+.vacancy-page .grid-container {
+  display: grid;
+  gap: 40px 24px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.vacancy-page .vacancy-item {
+  padding: 30px;
+  border-radius: 30px;
+  background-color: var(--lightgrey-color);
+}
+.vacancy-page .vacancy-item__title {
+  margin: 0 0 20px 0;
+  font-family: 'InterDisplay-SemiBold';
+  font-size: 32px;
+  line-height: 1.2;
+}
+.vacancy-page .vacancy-item__income {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+}
+.vacancy-page .flex-container {
+  display: flex;
+  margin: 0 0 70px 0;
+  gap: 10px;
+}
+.vacancy-page .vacancy-item__info {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: var(--white-color);
+  font-size: 15px;
+  color: var(--second-lightgrey-color);
+  line-height: 1.2;
+}
+.vacancy-page .no-vacancy-text {
+  font-size: 18px;
+}
+
 /* footer */
 .footer {
   padding: 80px 0 40px 0;
@@ -1733,6 +1771,10 @@ iframe {
   margin-left: auto;
   margin-bottom: 60px;
 }
+.paragraph-left-right p a {
+  color: var(--text-color);
+  text-decoration: underline;
+}
 
 /* Форма Забронировать онлайн */
 .booking-online-form-wrapper .white-frame {
@@ -1888,6 +1930,10 @@ iframe {
 }
 
 /* Страница Новости и Акции */
+.np-page .description-section .description-text {
+  font-size: 32px;
+  line-height: 1.2;
+}
 .np-page .n-main-section .frame {
   padding: 60px;
   border-radius: 40px;
@@ -1962,6 +2008,10 @@ iframe {
   margin: 0 0 40px 0;
   font-size: 18px;
   line-height: 1.2;
+}
+.np-detail-page .np-detail__text a {
+  color: var(--text-color);
+  text-decoration: underline;
 }
 .np-detail-page .np-detail__buttons {
   display: flex;
@@ -3239,6 +3289,11 @@ iframe {
     font-size: 30px;
   }
 
+  /* Страница Вакансии */
+  .vacancy-page .vacancy-item__title {
+    font-size: 30px;
+  }
+
 }
 
 @media only screen and (max-width : 1400px) {
@@ -3738,6 +3793,9 @@ iframe {
   }
 
   /* Страница Новости и Акции */
+  .np-page .description-section .description-text {
+    font-size: 30px;
+  }
   .np-page .n-main-section .frame {
     padding: 50px;
     border-radius: 35px;
@@ -3798,6 +3856,18 @@ iframe {
   /* Страница Реквизиты */
   .requisites-page .requisites-item .requisites-item__value {
     font-size: 22px;
+  }
+
+  /* Страница Вакансии */
+  .vacancy-page .vacancy-item__title {
+    font-size: 28px;
+  }
+  .vacancy-page .vacancy-item {
+    padding: 25px;
+    border-radius: 25px;
+  }
+  .vacancy-page .flex-container {
+    margin-bottom: 50px;
   }
 
   /* we use cookie */
@@ -4372,6 +4442,9 @@ iframe {
   }
 
   /* Страница Новости и Акции */
+  .np-page .description-section .description-text {
+    font-size: 28px;
+  }
   .np-page .n-main-section .frame {
     padding: 45px;
     border-radius: 30px;
@@ -4442,6 +4515,19 @@ iframe {
   /* Страница Реквизиты */
   .requisites-page .requisites-item .requisites-item__value {
     font-size: 20px;
+  }
+
+  /* Страница Вакансии */
+  .vacancy-page .vacancy-item__title {
+    font-size: 26px;
+  }
+  .vacancy-page .vacancy-item {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .vacancy-page .grid-container {
+    gap: 30px 16px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   /* we use cookie */
@@ -4635,6 +4721,9 @@ iframe {
   }
 
   /* Страница Новости и Акции */
+  .np-page .description-section .description-text {
+    font-size: 26px;
+  }
   .np-page .n-main-section .frame {
     padding: 40px;
     border-radius: 25px;
@@ -4931,6 +5020,14 @@ iframe {
     margin-bottom: 15px;
   }
 
+  /* Страница Вакансии */
+  .vacancy-page .vacancy-item__title {
+    font-size: 24px;
+  }
+  .vacancy-page .vacancy-item__income {
+    font-size: 19px;
+  }
+
   /* Страница 404 */
   .page-404 .page-404-title {
     margin-bottom: 30px;
@@ -5193,6 +5290,9 @@ iframe {
   }
 
   /* Страница Новости и Акции */
+  .np-page .description-section .description-text {
+    font-size: 24px;
+  }
   .np-page .n-main-section .frame {
     padding: 35px;
   }
@@ -5387,6 +5487,17 @@ iframe {
     height: 330px;
   }
 
+  /* Страница Вакансии */
+  .vacancy-page .vacancy-item__title {
+    font-size: 22px;
+  }
+  .vacancy-page .vacancy-item__income {
+    font-size: 18px;
+  }
+  .vacancy-page .no-vacancy-text {
+    font-size: 17px;
+  }
+
   /* Параграф текста левый и правый */
   .paragraph-left-right {
     font-size: 16px;
@@ -5536,6 +5647,9 @@ iframe {
   }
 
   /* Страница Новости и Акции */
+  .np-page .description-section .description-text {
+    font-size: 22px;
+  }
   .np-page .n-main-section .frame {
     padding: 25px;
     border-radius: 20px;
@@ -5668,6 +5782,18 @@ iframe {
   }
   .about-company-page .our-advantages-section .our-advantages-image {
     height: 330px;
+  }
+
+  /* Страница Вакансии */
+  .vacancy-page .grid-container {
+    gap: 16px;
+    grid-template-columns: auto;
+  }
+  .vacancy-page .flex-container {
+    margin-bottom: 40px;
+  }
+  .vacancy-page .no-vacancy-text {
+    font-size: 16px;
   }
 
   /* Страница 404 */
@@ -5832,6 +5958,9 @@ iframe {
   }
 
   /* Страница Новости и Акции */
+  .np-page .description-section .description-text {
+    font-size: 20px;
+  }
   .np-page .n-main-section .frame {
     padding: 20px;
     border-radius: 15px;
@@ -6021,6 +6150,15 @@ iframe {
     border-radius: 15px;
   }
 
+  /* Страница Вакансии */
+  .vacancy-page .vacancy-item__title {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  .vacancy-page .flex-container {
+    margin-bottom: 30px;
+  }
+
   /* Страница 404 */
   .page-404 .page-404-image {
     width: 300px;
@@ -6079,6 +6217,9 @@ iframe {
   }
 
   /* Страница Новости и Акции */
+  .np-page .description-section .description-text {
+    font-size: 18px;
+  }
   .np-page .n-main-section .n-main-section__title {
     height: 62px;
     font-size: 28px;

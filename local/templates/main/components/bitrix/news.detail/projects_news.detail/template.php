@@ -432,7 +432,7 @@ $promo = $arResult['PROPERTIES']['PROMO']['VALUE'];
 			<div class="container">
 			<div class="office-map-wrapper">
 				<div class="office-map">
-					<img src="<?=SITE_TEMPLATE_PATH?>/images/temp-office-map.jpg" alt="">
+					<img src="<?=SITE_TEMPLATE_PATH?>/images/office-map.jpg" alt="">
 				</div>
 				<div class="address-card">
 				<div class="address-card__image">
@@ -445,24 +445,26 @@ $promo = $arResult['PROPERTIES']['PROMO']['VALUE'];
 					<div class="address-item__image">
 						<img src="<?=SITE_TEMPLATE_PATH?>/images/geolocation.svg" alt="">
 					</div>
-					<div class="address-item__text">г. Челябинск, ул. Каслинская,д. 10, офис 123</div>
+					<div class="address-item__text"><?php echo $arResult['PROPERTIES']['OFFICE_ADDRESS']['VALUE']; ?></div>
 					</div>
 					<div class="address-item">
 					<div class="address-item__image">
 						<img src="<?=SITE_TEMPLATE_PATH?>/images/clock.svg" alt="">
 					</div>
-					<div class="address-item__text">Ежедневно с 09:00 до 20:00</div>
+					<div class="address-item__text"><?php echo $arResult['PROPERTIES']['OFFICE_WORKING_TIME']['VALUE']; ?></div>
 					</div>
 					<div class="address-item">
 					<div class="address-item__image">
 						<img src="<?=SITE_TEMPLATE_PATH?>/images/phone.svg" alt="">
 					</div>
-					<div class="address-item__text">+7 (999) 999 99 99</div>
+					<div class="address-item__text"><?php echo $arResult['PROPERTIES']['OFFICE_PHONE']['VALUE']; ?></div>
 					</div>
-					<a href="/driving-map" class="driving-map-btn tertiary-btn">
-					<span class="driving-map-btn__text tertiary-btn__text">Схема проезда</span>
-					<img src="<?=SITE_TEMPLATE_PATH?>/images/map-pin.svg" class="driving-map-btn__image" alt="">
-					</a>
+					<?php if($arResult['PROPERTIES']['OFFICE_DRIVING_MAP']['VALUE']) { ?>
+						<a href="<?php echo $arResult['PROPERTIES']['OFFICE_DRIVING_MAP']['VALUE']; ?>" class="driving-map-btn tertiary-btn">
+							<span class="driving-map-btn__text tertiary-btn__text">Схема проезда</span>
+							<img src="<?=SITE_TEMPLATE_PATH?>/images/map-pin.svg" class="driving-map-btn__image" alt="">
+						</a>
+					<?php } ?>
 					<a href="/contacts#big-booking-online-form-wrapper" class="make-an-appointment-btn primary-btn">
 					<span class="make-an-appointment-btn__text primary-btn__text">Записаться на встречу</span>
 					</a>

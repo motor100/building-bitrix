@@ -214,7 +214,15 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/imask.min.js");
             <div class="our-advantages-item swiper-slide">
               <div class="our-advantages-item__title"><span class="white-color">Детальная</span> проработка планировок</div>
             </div>
-
+            <div class="our-advantages-item swiper-slide">
+              <div class="our-advantages-item__title"><span class="white-color">Готовая отделка</span> — сразу к жизни!</div>
+            </div>
+            <div class="our-advantages-item swiper-slide">
+              <div class="our-advantages-item__title"><span class="white-color">Гибкие</span> условия оплаты</div>
+            </div>
+            <div class="our-advantages-item swiper-slide">
+              <div class="our-advantages-item__title"><span class="white-color">Сопровождение сделки</span> 'под ключ'</div>
+            </div>
           </div>
         </div>
       </div>
