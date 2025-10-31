@@ -1241,7 +1241,7 @@ iframe {
   stroke: var(--blue-color);
 }
 .footer .contacts {
-  width: 285px;
+  width: 290px;
   text-align: right;
 }
 .footer .contacts .footer-phone {
@@ -3531,7 +3531,7 @@ iframe {
     font-size: 17px;
   }
   .footer .contacts {
-    width: 237px;
+    width: 243px;
   }
   .footer .contacts .footer-phone {
     font-size: 26px;

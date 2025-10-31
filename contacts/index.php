@@ -28,27 +28,18 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/slimselect.min.js");
       
       <div class="grid-container">
         <div class="contacts-item c-item">
-          <div class="contacts-item__title c-item__title">+7 999 999 99 99</div>
+          <div class="contacts-item__title c-item__title">+7 (912) 897 99 59</div>
           <div class="contacts-item__text c-item__text">Единый телефон по вопросам приобретения недвижимости</div>
           <button class="callback-btn primary-btn js-callback-btn">
             <span class="callback-btn__text primary-btn__text">Перезвоните мне</span>
           </button>
         </div>
+        <!-- 
         <div class="contacts-item c-item">
           <div class="contacts-item__title c-item__title">+7 999 999 99 99</div>
           <div class="contacts-item__text c-item__text">Отдел по вопросам выдачи ключей, заселения и регистрации права собственности</div>
         </div>
-        <div class="contacts-item c-item">
-          <div class="contacts-item__title c-item__title">info@mail.ru</div>
-          <div class="contacts-item__text c-item__text">Отдел делопроизводства по вопросам финансовых обязательств: выплат, подтверждения сделок, компенсаций</div>
-        </div>
-        <div class="blue-contacts-item c-item">
-          <div class="blue-contacts-item__title c-item__title">Отдел клиентского сервиса</div>
-          <div class="blue-contacts-item__text c-item__text">Есть жалоба или предложение? Воспользуйтесь формой обратной связи</div>
-          <button class="write-us-btn tertiary-btn js-write-us-btn">
-            <span class="write-us-btn__text tertiary-btn__text">Написать нам</span>
-          </button>
-        </div>
+         -->
         <div class="contacts-item c-item">
           <div class="contacts-item__title c-item__title">Соцсети компании</div>
           <div class="socials">
@@ -73,6 +64,17 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/slimselect.min.js");
               <span class="socials-item__text">Вконтакте</span>
             </a>
           </div>
+        </div>
+        <div class="contacts-item c-item">
+          <div class="contacts-item__title c-item__title">eristavi.74sz@gmail.com</div>
+          <div class="contacts-item__text c-item__text">Отдел делопроизводства по вопросам финансовых обязательств: выплат, подтверждения сделок, компенсаций</div>
+        </div>
+        <div class="blue-contacts-item c-item">
+          <div class="blue-contacts-item__title c-item__title">Отдел клиентского сервиса</div>
+          <div class="blue-contacts-item__text c-item__text">Есть жалоба или предложение? Воспользуйтесь формой обратной связи</div>
+          <button class="write-us-btn tertiary-btn js-write-us-btn">
+            <span class="write-us-btn__text tertiary-btn__text">Написать нам</span>
+          </button>
         </div>
       </div>
 

@@ -51,7 +51,7 @@
         </div>
       </div>
       <div class="contacts">
-        <a href="tel:+73517501700" class="footer-phone">+7 (351) 750 17 00</a>
+        <a href="tel:+79128979959" class="footer-phone">+7 (912) 897 99 59</a>
         <div class="footer-socials">
           <a href="#" class="footer-socials-item">
             <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -151,8 +151,8 @@
     </div>
 
     <div class="socials">
-      <a href="#" class="socials-item socials-item-phone">
-        <span class="phone-text">+7 (999) 999-99-99</span>
+      <a href="tel:+79128979959" class="socials-item socials-item-phone">
+        <span class="phone-text">+7 (912) 897 99 59</span>
       </a>
       <a href="#" class="socials-item">
         <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -198,7 +198,7 @@
         <div class="menu-item__image">
           <img src="<?=SITE_TEMPLATE_PATH?>/images/bottom-phone.svg" alt="">
         </div>
-        <a href="tel:+73517501700" class="full-link"></a>
+        <a href="tel:+79128979959" class="full-link"></a>
       </div>
       <button class="menu-btn quaternary-btn js-open-menu-btn">
         <span class="menu-btn__text quaternary-btn__text">Меню</span>

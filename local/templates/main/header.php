@@ -76,9 +76,9 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         </div>
       </div>
       <div class="header-contacts hidden-mobile">
-        <a href="tel:+79999999999" class="header-phone">+7 999 999 99 99</a>
+        <a href="tel:+79128979959" class="header-phone">+7 (912) 897 99 59</a>
         <button class="callback-me-btn quaternary-btn js-callback-btn">
-          <span class="quaternary-btn__text"> Перезвоните мне</span>
+          <span class="quaternary-btn__text">Перезвоните мне</span>
         </button>
       </div>
     </div>

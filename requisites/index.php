@@ -43,7 +43,7 @@ $APPLICATION->SetTitle("Реквизиты");
       </div>
       <div class="requisites-item">
         <div class="requisites-item__title">Телефон</div>
-        <div class="requisites-item__value">+7 (351) 750 17 00</div>
+        <div class="requisites-item__value">+7 (912) 897 99 59</div>
       </div>
     </div>
   </div>
