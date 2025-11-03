@@ -130,6 +130,7 @@ $APPLICATION->SetTitle("Ипотека");
     </div>
   </div>
 
+  <!-- 
   <div class="contacts-section">
     <div class="container">
       <div class="flex-container">
@@ -168,6 +169,7 @@ $APPLICATION->SetTitle("Ипотека");
       </div>
     </div>
   </div>
+   -->
 
 </div>
 

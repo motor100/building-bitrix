@@ -17,7 +17,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/swiper-bundle.min.js");
   </div>
 </div>
 
-<div class="about-company-page">
+<div class="about-company-page pa-page">
 
   <div class="title-section section">
     <div class="container">
@@ -162,15 +162,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/swiper-bundle.min.js");
               <div class="our-advantages-item swiper-slide">
                 <div class="our-advantages-item__title"><span class="white-color">Детальная</span> проработка планировок</div>
               </div>
-              <div class="our-advantages-item swiper-slide">
-                <div class="our-advantages-item__title"><span class="white-color">Готовая отделка</span> — сразу к жизни!</div>
-              </div>
-              <div class="our-advantages-item swiper-slide">
-                <div class="our-advantages-item__title"><span class="white-color">Гибкие</span> условия оплаты</div>
-              </div>
-              <div class="our-advantages-item swiper-slide">
-                <div class="our-advantages-item__title"><span class="white-color">Сопровождение сделки</span> 'под ключ'</div>
-              </div>
+
             </div>
           </div>
 
@@ -183,26 +175,9 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/swiper-bundle.min.js");
       </div>
 
     </div>
-  </div>
 
-  <div class="mission-section section">
     <div class="container">
-      <div class="flex-container">
-        <div class="mission-title primary-title w60">Миссия ЭРИСТАВИ  — раскрывать потенциал каждой локации и делать жизнь в наших домах источником положительных эмоций</div>
-        <div class="mission-description w40">
-          <div class="mission-description__title">В портфеле компании 9 реализованных проектов:</div>
-          <div class="mission-description__text">
-            <p>Название проекта</p>
-            <p>Название проекта</p>
-            <p>Название проекта</p>
-            <p>Название проекта</p>
-            <p>Название проекта</p>
-            <p>Мы создаём современные и продуманные проекты с развитой инфраструктурой.</p>
-            <p>На сегодняшний день в стадии реализации находятся 12 проектов:</p>
-            <p>Название проекта</p>
-          </div>
-        </div>
-      </div>
+      <div class="mission-title">Миссия ЭРИСТАВИ  — раскрывать потенциал каждой локации и делать жизнь в наших домах источником положительных эмоций</div>
     </div>
   </div>
 

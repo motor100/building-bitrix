@@ -505,7 +505,6 @@ $promo = $arResult['PROPERTIES']['PROMO']['VALUE'];
 				),
 				false
 			);?>
-			<!-- "project_reviews", -->
 		</div>
 	</div>
 	<?php //} ?>
