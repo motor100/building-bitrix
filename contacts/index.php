@@ -40,6 +40,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/slimselect.min.js");
           <div class="contacts-item__text c-item__text">Отдел по вопросам выдачи ключей, заселения и регистрации права собственности</div>
         </div>
          -->
+        <!-- 
         <div class="contacts-item c-item">
           <div class="contacts-item__title c-item__title">Соцсети компании</div>
           <div class="socials">
@@ -65,10 +66,8 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/slimselect.min.js");
             </a>
           </div>
         </div>
-        <div class="contacts-item c-item">
-          <div class="contacts-item__title c-item__title">eristavi.74sz@gmail.com</div>
-          <div class="contacts-item__text c-item__text">Отдел делопроизводства по вопросам финансовых обязательств: выплат, подтверждения сделок, компенсаций</div>
-        </div>
+         -->
+
         <div class="blue-contacts-item c-item">
           <div class="blue-contacts-item__title c-item__title">Отдел клиентского сервиса</div>
           <div class="blue-contacts-item__text c-item__text">Есть жалоба или предложение? Воспользуйтесь формой обратной связи</div>
@@ -76,6 +75,11 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/slimselect.min.js");
             <span class="write-us-btn__text tertiary-btn__text">Написать нам</span>
           </button>
         </div>
+        <div class="contacts-item c-item">
+          <div class="contacts-item__title c-item__title">eristavi.74sz@gmail.com</div>
+          <div class="contacts-item__text c-item__text">Отдел делопроизводства по вопросам финансовых обязательств: выплат, подтверждения сделок, компенсаций</div>
+        </div>
+        
       </div>
 
     </div>
@@ -187,25 +191,25 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/slimselect.min.js");
               <div class="address-item__image">
                 <img src="<?=SITE_TEMPLATE_PATH?>/images/geolocation.svg" alt="">
               </div>
-              <div class="address-item__text">г. Челябинск, ул. Каслинская,  д. 10, офис 123</div>
+              <div class="address-item__text">г. Челябинск, ул Энгельса, д. 4, п. 344</div>
             </div>
             <div class="address-item">
               <div class="address-item__image">
                 <img src="<?=SITE_TEMPLATE_PATH?>/images/clock.svg" alt="">
               </div>
-              <div class="address-item__text">Ежедневно с 09:00 до 20:00</div>
+              <div class="address-item__text">Пн-Пт 10:00 - 18:00</div>
             </div>
             <div class="address-item">
               <div class="address-item__image">
                 <img src="<?=SITE_TEMPLATE_PATH?>/images/phone.svg" alt="">
               </div>
-              <div class="address-item__text">+7 (999) 999 99 99</div>
+              <div class="address-item__text">+7 (912) 897 99 59</div>
             </div>
             <a href="/driving-map" class="driving-map-btn tertiary-btn">
               <span class="driving-map-btn__text tertiary-btn__text">Схема проезда</span>
               <img src="<?=SITE_TEMPLATE_PATH?>/images/map-pin.svg" class="driving-map-btn__image" alt="">
             </a>
-            <a href="#booking-online-form-wrapper" class="make-an-appointment-btn primary-btn">
+            <a href="#big-booking-online-form-wrapper" class="make-an-appointment-btn primary-btn">
               <span class="make-an-appointment-btn__text primary-btn__text">Записаться на встречу</span>
             </a>
           </div>
