@@ -70,24 +70,24 @@ $APPLICATION->SetTitle($arResult["NAME"]);
           <div class="flex-container">
             <div class="form-group">
               <label for="big-form-name" class="label">Имя*</label>
-              <input type="text" name="name" id="big-form-name" class="input-field" autocomplete="on" placeholder="Введите имя">
+              <input type="text" name="name" id="big-form-name" class="input-field js-required-name" autocomplete="on" placeholder="Введите имя">
             </div>
             <div class="form-group">
               <label for="big-form-email" class="label">Email*</label>
-              <input type="email" name="email" id="big-form-email" class="input-field" autocomplete="on" placeholder="pochta@mail.ru">
+              <input type="email" name="email" id="big-form-email" class="input-field js-required-email" autocomplete="on" placeholder="pochta@mail.ru">
             </div>
-            <button id="callback-submit-btn5" class="submit-btn tertiary-btn">
+            <button type="button" id="subscribe-form-btn" class="submit-btn tertiary-btn">
               <span class="tertiary-btn__text">Подписаться на рассылку</span>
             </button>
           </div>
           <div class="checkboxes-flex-container">
             <div class="agreement-text">
-              <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback5" required onchange="document.getElementById('callback-submit-btn5').disabled = !this.checked;">
+              <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback5" required onchange="document.getElementById('subscribe-form-btn').disabled = !this.checked;">
               <label for="checkbox-read-callback5" class="custom-checkbox-label"></label>
               <span class="checkbox-text">Ознакомлен (-на) с <a href="/privacy-policy" class="privacy-policy-link" target="_blank">политикой конфиденциальности</a></span>
             </div>
             <div class="agreement-text">
-              <input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-callback5" required onchange="document.getElementById('callback-submit-btn5').disabled = !this.checked;">
+              <input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-callback5" required onchange="document.getElementById('subscribe-form-btn').disabled = !this.checked;">
               <label for="checkbox-agree-callback5" class="custom-checkbox-label"></label>
               <span class="checkbox-text">Я согласен (-на) на <a href="/agreement" class="agreement-link" target="_blank">обработку персональных данных</a></span>
             </div>

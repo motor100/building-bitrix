@@ -507,7 +507,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // AJAX Отправка формы Заказать звонок
   const callbackModalForm = document.getElementById('callback-modal-form');
   const callbackModalFormBtn = document.getElementById('callback-modal-form-btn');
-  
 
   function ajaxCallback(form) {
 
@@ -639,6 +638,67 @@ document.addEventListener("DOMContentLoaded", () => {
   if(moreDetailsFormBtn) {
     moreDetailsFormBtn.onclick = function() {
       ajaxBookingOnline(moreDetailsForm);
+    }
+  }
+
+
+  // AJAX Отправка формы Подписаться на рассылку в детальной карточке акции
+  const subscribeForm = document.getElementById('subscribe-form');
+  const subscribeFormBtn = document.getElementById('subscribe-form-btn');
+
+  function ajaxSubscribe(form) {
+
+    let arr = [];
+
+    const inputName = form.querySelector('.js-required-name');
+    if (inputName.value.length < 3 || inputName.value.length > 30) {
+      inputName.classList.add('required');
+      arr.push(false);
+    } else {
+      inputName.classList.remove('required');
+    }
+
+    const inputEmail = form.querySelector('.js-required-email');
+    if (inputEmail.value.length < 3 || inputEmail.value.length > 50) {
+      inputEmail.classList.add('required');
+      arr.push(false);
+    } else {
+      inputEmail.classList.remove('required');
+    }
+
+    const inputCheckboxes = form.querySelectorAll('.js-required-checkbox');
+    inputCheckboxes.forEach((item) => {
+      if (item.checked) {
+        item.classList.remove('required');
+      } else {
+        arr.push(false);
+        item.classList.add('required');
+      }
+    });
+
+    if (arr.length == 0) {
+
+      fetch('/local/templates/main/phpmailer/subscribe.php', {
+        method: 'POST',
+        cache: 'no-cache',
+        body: new FormData(form)
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+
+      alert("Спасибо. Мы свяжемся с вами.");
+
+      form.reset();
+
+    }
+
+    return false;
+  }
+
+  if(subscribeFormBtn) {
+    subscribeFormBtn.onclick = function() {
+      ajaxSubscribe(subscribeForm);
     }
   }
 
