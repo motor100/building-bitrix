@@ -63,12 +63,6 @@ $promo = $arResult['PROPERTIES']['PROMO']['VALUE'];
 			</div>
 			<div class="make-an-appointment-wrapper">
 
-			<?php if($status != "Продажи завершены") { ?>
-				<a href="/granat-vidget" target="_blank" class="flats-btn tertiary-btn">
-					<span class="tertiary-btn__text flats-btn__text">Квартиры</span>
-				</a>
-			<?php } ?>
-
 			<?php //if($status == "Сдан" || $status == "Продажи завершены") { ?>
 				<a href="#testimonials-section" class="testimonial-btn tertiary-btn testimonial-mobile-btn">
 					<span class="tertiary-btn__text">Отзывы</span>

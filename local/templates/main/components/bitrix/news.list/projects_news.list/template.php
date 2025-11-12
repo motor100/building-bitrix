@@ -48,10 +48,8 @@ $this->setFrameMode(true);
         <div class="projects-item__price"><?echo $arItem['PROPERTIES']['AREA']['VALUE']?> кв.м.</div>
         <div class="flex-container">
           <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="projects-item__btn about-project-btn">О проекте</a>
-          <?php if ($arItem['PROPERTIES']['VIDGET_SMART_PLAN']['VALUE']) { ?>
-            <a href="<?php echo $arItem['PROPERTIES']['VIDGET_SMART_PLAN']['VALUE']; ?>" class="projects-item__btn view-flats-btn">Смотреть квартиры</a>
-          <?php } ?>
         </div>
+        <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="full-link"></a>
       </div>
       <div class="projects-title"><?echo $arItem["NAME"]?></div>
       <div class="projects-city"><?echo $arItem['PROPERTIES']['CITY']['VALUE']?></div>
