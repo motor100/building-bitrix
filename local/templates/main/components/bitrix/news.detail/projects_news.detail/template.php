@@ -24,6 +24,7 @@ $working_progress = $arResult['PROPERTIES']['WORKING_PROGRESS']['VALUE'];
 $status = $arResult['PROPERTIES']['STATUS']['VALUE'];
 $advantages = $arResult['PROPERTIES']['ADVANTAGES']['VALUE'];
 $promo = $arResult['PROPERTIES']['PROMO']['VALUE'];
+$company_info = $arResult['PROPERTIES']['COMPANY_INFO']['VALUE']['TEXT'];
 ?>
 
 <div class="breadcrumbs">
@@ -502,6 +503,12 @@ $promo = $arResult['PROPERTIES']['PROMO']['VALUE'];
 		</div>
 	</div>
 	<?php //} ?>
+
+	<?php if($company_info) { ?>
+		<div class="required-section">
+			<div class="container"><?php echo htmlspecialcharsBack($company_info); ?></div>
+		</div>
+	<?php } ?>
 
 </div>
 
