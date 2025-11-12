@@ -208,7 +208,7 @@ $APPLICATION->SetTitle("Партнерам");
           
         </div>
         <div class="contacts-photo w40">
-          <img src="<?=SITE_TEMPLATE_PATH?>/images/no-photo.jpg" alt="">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/cabinet.jpg" alt="">
           <div class="contacts">
             <div class="contacts-position">Технический директор ГК Эристави</div>
             <div class="contacts-name">Иноземцев Владимир Евгеньевич</div>

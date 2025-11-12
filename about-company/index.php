@@ -167,7 +167,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/swiper-bundle.min.js");
           </div>
 
           <div class="our-advantages-image">
-            <img src="<?=SITE_TEMPLATE_PATH?>/images/temp-about-page.jpg" alt="">
+            <img src="<?=SITE_TEMPLATE_PATH?>/images/about-company.jpg" alt="">
           </div>
 
         </div>
@@ -258,16 +258,16 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/swiper-bundle.min.js");
       <div class="primary-title section-title">Награды</div>
       <div class="grid-container">
         <div class="awards-item">
-          <img src="<?=SITE_TEMPLATE_PATH?>/images/temp-about-company.jpg" alt="">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/no-photo.jpg" alt="">
         </div>
         <div class="awards-item">
-          <img src="<?=SITE_TEMPLATE_PATH?>/images/temp-about-company.jpg" alt="">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/no-photo.jpg" alt="">
         </div>
         <div class="awards-item">
-          <img src="<?=SITE_TEMPLATE_PATH?>/images/temp-about-company.jpg" alt="">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/no-photo.jpg" alt="">
         </div>
         <div class="awards-item">
-          <img src="<?=SITE_TEMPLATE_PATH?>/images/temp-about-company.jpg" alt="">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/no-photo.jpg" alt="">
         </div>
       </div>
     </div>
@@ -395,24 +395,6 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/swiper-bundle.min.js");
 	false
 );
       ?>
-    </div>
-  </div>
-
-  <div class="team-section">
-    <div class="container">
-      <div class="primary-title section-title">Команда</div>
-      <div class="flex-container">
-        <div class="name w60">
-          <div class="name__title">Имя и Фамилия</div>
-          <div class="name__description">
-            <p>We’ve done all the heavy lifting so you don’t have to — get all the data you need to launch and grow your business faster.</p>
-            <p>We’ve done all the heavy lifting so you don’t have to — get all the data you need to launch and grow your business faster.</p>
-          </div>
-        </div>
-        <div class="photo">
-          <img src="<?=SITE_TEMPLATE_PATH?>/images/temp-team.jpg" alt="">
-        </div>
-      </div>
     </div>
   </div>
 
