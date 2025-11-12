@@ -351,7 +351,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/imask.min.js");
           </a>
         </div>
         <div class="about-company-image">
-          <img src="<?=SITE_TEMPLATE_PATH?>/images/temp-about-company.jpg" alt="">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/about.jpg" alt="">
         </div>
       </div>
     </div>
