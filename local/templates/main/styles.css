@@ -357,6 +357,9 @@ iframe {
   width: 155px;
   height: 48px;
 }
+.no-text {
+  height: 500px;
+}
 
 /* Верхнее меню */
 .top-menu {

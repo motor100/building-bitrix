@@ -43,6 +43,9 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
             <li class="sub-menu-item">
               <a href="#" class="sub-menu-item__link">Квартиры</a>
             </li>
+            <li class="sub-menu-item">
+              <a href="/business-rooms" class="sub-menu-item__link">Коммерция</a>
+            </li>
           </ul>
         </div>
         <div class="menu-item">
