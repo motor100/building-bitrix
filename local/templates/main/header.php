@@ -34,8 +34,23 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         </div>
       </div>
       <div class="top-menu">
-        <div class="menu-item">
+        <div class="menu-item menu-item-has-children">
           <a href="/projects" class="menu-item__link">Проекты</a>
+
+          <?php
+          $arFilter1 = Array("IBLOCK_ID" => 6, "SECTION_ID" => 5);
+          $res1 = CIBlockElement::GetList(array(), $arFilter1, false, Array("nPageSize"=>5));
+          ?>
+
+          <ul class="sub-menu">
+            <?php while($ob = $res1->GetNextElement()) {
+            $arFields = $ob->GetFields(); ?>
+            <li class="sub-menu-item">
+              <a href="<?=$arFields["DETAIL_PAGE_URL"]?>" class="sub-menu-item__link"><?php echo $arFields["NAME"]; ?></a>
+            </li>
+            <?php } ?>
+          </ul>
+
         </div>
         <div class="menu-item menu-item-has-children real-estate">
           <span class="menu-item__link">Недвижимость</span>

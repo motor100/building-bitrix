@@ -22,10 +22,10 @@
           <div class="menu-title">Наши проекты</div>
 
           <?php
-          $arFilter = Array("IBLOCK_ID" => 6, "SECTION_ID" => 5);
-          $res = CIBlockElement::GetList(array(), $arFilter, false, Array("nPageSize"=>5));
+          $arFilter2 = Array("IBLOCK_ID" => 6, "SECTION_ID" => 5);
+          $res2 = CIBlockElement::GetList(array(), $arFilter2, false, Array("nPageSize"=>5));
 
-          while($ob = $res->GetNextElement()) {
+          while($ob = $res2->GetNextElement()) {
             $arFields = $ob->GetFields(); ?>
             <a href="<?=$arFields["DETAIL_PAGE_URL"]?>" class="menu-item"><?php echo $arFields["NAME"]; ?></a>
           <?php } ?>
