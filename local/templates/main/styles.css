@@ -798,6 +798,7 @@ iframe {
   padding: 25px 30px;
   border-radius: 15px;
   background-color: var(--dark-color);
+  gap: 40px;
   align-items: center;
   justify-content: space-between;
 }
