@@ -167,11 +167,13 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/swiper-bundle.min.js");
           </div>
 
           <div class="our-advantages-image hidden-mobile">
-            <img src="<?=SITE_TEMPLATE_PATH?>/images/about-company.jpg" alt="">
+            <img src="<?=SITE_TEMPLATE_PATH?>/images/about-company.jpg" class="about-company__bg" alt="">
+            <img src="<?=SITE_TEMPLATE_PATH?>/images/about-company__logo.png" class="about-company__logo" alt="">
           </div>
 
           <div class="our-advantages-image hidden-desktop">
-            <img src="<?=SITE_TEMPLATE_PATH?>/images/about.jpg" alt="">
+            <img src="<?=SITE_TEMPLATE_PATH?>/images/about.jpg" class="about-company__bg" alt="">
+            <img src="<?=SITE_TEMPLATE_PATH?>/images/about-company__logo.png" class="about-company__logo" alt="">
           </div>
 
         </div>

@@ -838,14 +838,24 @@ iframe {
   transform: rotate(-45deg);
 }
 .about-company-section .about-company-image {
+  position: relative;
   width: 45%;
   border-radius: 20px;
   overflow: hidden;
 }
-.about-company-section .about-company-image img {
+.about-company-section .about-company-image .about-company-image__bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.about-company-section .about-company-image .about-company-image__logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 250px;
+  height: 77px;
+  object-fit: contain;
+  z-index: 1;
 }
 
 /* Секция Новости главная и страница Новости */
@@ -2318,10 +2328,19 @@ iframe {
   overflow: hidden;
   z-index: -1;
 }
-.about-company-page .our-advantages-section .our-advantages-image img {
+.about-company-page .our-advantages-section .our-advantages-image .about-company__bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.about-company-page .our-advantages-section .our-advantages-image .about-company__logo {
+  position: absolute;
+  top: 110px;
+  left: 40px;
+  width: 800px;
+  height: 245px;
+  object-fit: contain;
+  z-index: 1;
 }
 .about-company-page .our-advantages-section .mission-title {
   padding: 60px;
@@ -3588,6 +3607,10 @@ iframe {
   .about-company-section .about-company-accent .about-company-accent__text {
     font-size: 19px;
   }
+  .about-company-section .about-company-image .about-company-image__logo {
+    width: 200px;
+    height: 61px;
+  }
 
   /* Секция следите за акциями */
   .follow-section .follow-section-frame {
@@ -3924,6 +3947,10 @@ iframe {
   .about-company-page .our-advantages-section .mission-title {
     padding: 40px;
     font-size: 34px;
+  }
+  .about-company-page .our-advantages-section .our-advantages-image .about-company__logo {
+    width: 700px;
+    height: 215px;
   }
 
   /* Страница Контакты */
@@ -4621,6 +4648,10 @@ iframe {
     padding: 30px;
     font-size: 30px;
   }
+  .about-company-page .our-advantages-section .our-advantages-image .about-company__logo {
+    width: 600px;
+    height: 184px;
+  }
 
   /* Страница Контакты */
   .contacts-page .contacts-section .grid-container {
@@ -5255,6 +5286,10 @@ iframe {
     padding: 25px;
     font-size: 26px;
   }
+  .about-company-page .our-advantages-section .our-advantages-image .about-company__logo {
+    width: 450px;
+    height: 138px;
+  }
 
   /* Параграф текста левый и правый */
   .paragraph-left-right {
@@ -5786,6 +5821,11 @@ iframe {
     border-radius: 20px;
     font-size: 22px;
   }
+  .about-company-page .our-advantages-section .our-advantages-image .about-company__logo {
+    top: 80px;
+    width: 350px;
+    height: 107px;
+  }
 
   /* Страница Вакансии */
   .vacancy-page .vacancy-item__title {
@@ -6271,6 +6311,10 @@ iframe {
   .about-company-section .about-company-btn__text {
     font-size: 16px;
   }
+  .about-company-section .about-company-image .about-company-image__logo {
+    width: 150px;
+    height: 46px;
+  }
 
   /* footer */
   .footer .logo-wrapper .footer-decription {
@@ -6520,6 +6564,11 @@ iframe {
   .about-company-page .our-advantages-section .mission-title {
     border-radius: 15px;
     font-size: 18px;
+  }
+  .about-company-page .our-advantages-section .our-advantages-image .about-company__logo {
+    top: 140px;
+    width: 250px;
+    height: 76px;
   }
 
   /* Страница Партнерам */
